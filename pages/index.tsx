@@ -1,10 +1,13 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import HomeSecond from "@/components/HomeSecond";
+import HomeFirst from "@/components/HomeFirst";
+import MainLayout from "@/layouts/MainLayout";
+import { useSelector } from "react-redux";
 
 export default function Home() {
-  return (
-    <div>Hello world</div>
-  );
+  const {FIRST, SECOND} = useSelector((state: any) => state.home);
+
+  return (<MainLayout>
+    {FIRST && <HomeFirst />}
+    {SECOND && <HomeSecond />}
+  </MainLayout>);
 }

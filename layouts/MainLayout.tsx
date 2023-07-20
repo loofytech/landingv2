@@ -15,13 +15,13 @@ interface LProps {
 }
 
 export default function MainLayout({children}: LProps) {
-  const {FIRST, SECOND} = useSelector((state: any) => state.home);
+  const {FIRST, SECOND, HEADER_COLOR_CSS} = useSelector((state: any) => state.home);
 
   return (<div className={font.className}>
     <div className="z-50 fixed top-0 bg-transparent w-full flex items-center p-5">
       <Image src={"/loofytech@300p.png"} width={82} height={81} alt="logo header" />
       <div
-        className={`h-full w-full pr-20 flex items-center gap-10 justify-center text-2xl ${FIRST ? "text-black" : "text-primary"}`}
+        className={`h-full w-full pr-20 flex items-center gap-10 justify-center text-2xl ease-in-out duration-100 ${HEADER_COLOR_CSS}`}
       >
         <Link href={""}>Home</Link>
         <Link href={""}>Web Development</Link>

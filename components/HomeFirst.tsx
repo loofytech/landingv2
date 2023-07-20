@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useDispatch } from "react-redux";
-import { setSecond, setFirst } from "@/store/reducers/homeReducer";
+import { setSecond, setFirst, setHeaderColor } from "@/store/reducers/homeReducer";
 
 export default function HomeFirst() {
   const dispatch = useDispatch();
@@ -8,6 +8,7 @@ export default function HomeFirst() {
   const nextSection = () => {
     dispatch(setSecond(true));
     dispatch(setFirst(false));
+    dispatch(setHeaderColor("text-primary"));
   }
 
   return (<div className="flex flex-col justify-center items-center gap-8 h-screen">

@@ -1,8 +1,24 @@
 import { motion, useScroll } from "framer-motion";
 import { createRef, useEffect, useRef, useState } from "react";
+import { setHeaderColor } from "@/store/reducers/homeReducer";
+import { useDispatch } from "react-redux";
 
 export default function HomeSecond() {
+  const dispatch = useDispatch();
+
   useEffect(() => {
+    document.querySelector(".snap-container")?.addEventListener("scroll", (e) => {
+      const inPosition = (e.currentTarget as HTMLElement).scrollTop;
+      const fixPosition = parseInt(inPosition.toFixed());
+      if (fixPosition >= 400) {
+        dispatch(setHeaderColor("text-black"));
+      } else {
+        dispatch(setHeaderColor("text-primary"));
+      }
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    });
   }, []);
 
   return (<div className="absolute top-0 w-full z-10 snap-container">

@@ -4,7 +4,8 @@ const homeReducer = createSlice({
   name: "homeReducer",
   initialState: {
     FIRST: true,
-    SECOND: false
+    SECOND: false,
+    HEADER_COLOR_CSS: "text-black"
   },
   reducers: {
     setFirst: (state, param) => {
@@ -12,10 +13,13 @@ const homeReducer = createSlice({
     },
     setSecond: (state, param) => {
       state.SECOND = param.payload;
+    },
+    setHeaderColor: (state, param) => {
+      state.HEADER_COLOR_CSS = param.payload;
     }
   }
 });
 
-export const {setFirst, setSecond} = homeReducer.actions;
+export const {setFirst, setSecond, setHeaderColor} = homeReducer.actions;
 
 export default homeReducer.reducer;

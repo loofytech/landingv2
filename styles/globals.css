@@ -25,3 +25,12 @@ html, body {
   scroll-snap-align: start;
   position: relative;
 }
+
+.flash {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}

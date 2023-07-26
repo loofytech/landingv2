@@ -1,15 +1,16 @@
 import Image from "next/image";
-import { Bebas_Neue } from "next/font/google";
+import { Roboto } from "next/font/google";
 import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
 import { motion } from "framer-motion";
 import { setBgBot, setBgTop, setFlash } from "@/store/reducers/transitionReducer";
 import { Suspense, useEffect } from "react";
 import Loading from "@/pages/loading";
+import NextNProgress from "nextjs-progressbar";
 import { useRouter } from "next/router";
 import { useEffectOnce } from "usehooks-ts";
 
-const font = Bebas_Neue({
+const font = Roboto({
   subsets: ["latin"],
   weight: "400"
 });
@@ -74,10 +75,12 @@ export default function MainLayout({children}: LProps) {
   }
 
   return (<div className={font.className}>
-    <div className="z-50 fixed top-0 bg-transparent w-full flex items-center p-5">
-      <Image src={"/loofytech@300p.png"} width={82} height={81} alt="logo header" />
+    <div className="z-50 fixed top-0 bg-white w-full flex items-center py-5 px-2 md:px-14 xl:px-52 shadow">
+      <div className="relative top-1.5">
+        <Image src={"/logo.svg"} width={197} height={58} alt="logo header" />
+      </div>
       <div
-        className={`h-full w-full pr-20 flex items-center gap-10 justify-center text-2xl ease-in-out duration-100 ${HEADER_COLOR_CSS}`}
+        className={`h-full w-full flex items-center pr-10 gap-10 justify-center font-semibold ease-in-out duration-100 ${HEADER_COLOR_CSS}`}
       >
         <Link href={"/"}>Home</Link>
         <Link href={"/webdev"}>Web Development</Link>
@@ -85,8 +88,20 @@ export default function MainLayout({children}: LProps) {
         <Link href={"/about"}>About</Link>
         <Link href={"/contact"}>Contact</Link>
       </div>
+      <div>
+        <button
+          type="button"
+          className="gap-2 font-semibold w-36 h-10 relative text-white rounded-lg bg-primary"
+        >
+          <div className="flex justify-center items-center gap-2 absolute w-full right-0 top-0 bottom-0 left-0">
+            <Image src={"/whatsapp.svg"} width={24} height={24} alt="logo whatsapp" />
+            <span className="">Konsultasi</span>
+          </div>
+        </button>
+      </div>
     </div>
     {children}
-    {FLASH && <Loading />}
+    {/* {FLASH && <Loading />} */}
+    <NextNProgress color="#00529D" />
   </div>);
 }

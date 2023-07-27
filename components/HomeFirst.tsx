@@ -193,8 +193,262 @@ export default function HomeFirst() {
           </Slider>
         </div>
       </div>
-      <div className="h-screen bg-secondary_a"></div>
-      <div className="h-screen bg-gray flex flex-col justify-center items-center px-2 md:px-14 xl:px-52"></div>
+      <div className="pb-20 bg-secondary_a px-2 md:px-14 xl:px-52">
+        <div className="gap-10 flex justify-between">
+          <div className="w-80">
+            <div className="px-8 py-12 bg-primary flex flex-col gap-0.5 rounded-lg service-info">
+              <div className="text-3xl text-white text-center mb-5 font-bold">Basic</div>
+              <div className="text-center mb-10 font-bold">
+                <button className="text-primary px-8 py-2 rounded-full bg-secondary">Order Sekarang</button>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>5 Halaman</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>5 Hari Pengerjaan</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>1x Revisi</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>1 SEO Keyword</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>5 Page SEO Dasar</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>10 Upload Setup Gambar</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>+3 Akun Email</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>GRATIS! SSL</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>GRATIS! DOMAIN .COM/CO.ID</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>Mobile Friendly</span>
+              </div>
+            </div>
+          </div>
+          <div className="w-80">
+            <div className="px-8 py-12 bg-primary flex flex-col gap-0.5 rounded-lg service-info">
+              <div className="text-3xl text-white text-center mb-5 font-bold">Standard</div>
+              <div className="text-center mb-10 font-bold">
+                <button className="text-primary px-8 py-2 rounded-full bg-secondary">Order Sekarang</button>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>10 Halaman</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>14 Hari Pengerjaan</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>5x Revisi</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>3 SEO Keyword</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>50 Page SEO Dasar</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>10+ Upload Setup Gambar</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>+3 Akun Email</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>GRATIS! SSL</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>GRATIS! DOMAIN .COM/.ID</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>Mobile Friendly</span>
+              </div>
+            </div>
+          </div>
+          <div className="w-80">
+            <div className="px-8 py-12 bg-primary flex flex-col gap-0.5 rounded-lg service-info">
+              <div className="text-3xl text-white text-center mb-5 font-bold">Premium</div>
+              <div className="text-center mb-10 font-bold">
+                <button className="text-primary px-8 py-2 rounded-full bg-secondary">Order Sekarang</button>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>20 Halaman</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>1 Hari Pengerjaan</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>99x Revisi</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>99 SEO Keyword</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>99 Page SEO Dasar</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>99 Upload Setup Gambar</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>99 Akun Email</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>GRATIS! SSL</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>GRATIS! DOMAIN .COM/.ID</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
+                <span>Mobile Friendly</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="py-20 bg-primary_a flex flex-col justify-center items-center px-2 md:px-20 xl:px-72">
+        <h1 className="text-center text-5xl font-bold text-white mb-16">Our Client</h1>
+        <div className="w-full grid grid-cols-6">
+          <div className="border border-b-0 border-r-0 border-black flex justify-center hover:bg-white">
+            <Image src={"/Dinamika_Network_1.png"} width={144} height={144} alt="" />
+          </div>
+          <div className="border border-b-0 border-r-0 border-black flex justify-center hover:bg-white">
+            <Image src={"/PT_Duma_1.png"} width={144} height={144} alt="" />
+          </div>
+          <div className="border border-b-0 border-r-0 border-black flex justify-center hover:bg-white">
+            <Image src={"/Stars_1.png"} width={144} height={144} alt="" />
+          </div>
+          <div className="border border-b-0 border-r-0 border-black flex justify-center hover:bg-white">
+            <Image src={"/Liffe_1.png"} width={144} height={144} alt="" />
+          </div>
+          <div className="border border-b-0 border-r-0 border-black flex justify-center hover:bg-white">
+            <Image src={"/Meta_1.png"} width={144} height={144} alt="" />
+          </div>
+          <div className="border border-b-0 border-black flex justify-center hover:bg-white">
+            <Image src={"/SMK_1.png"} width={144} height={144} alt="" />
+          </div>
+          <div className="border border-r-0 border-black flex justify-center hover:bg-white">
+            <Image src={"/GPM_1.png"} width={144} height={144} alt="" />
+          </div>
+          <div className="border border-r-0 border-black flex justify-center hover:bg-white">
+            <Image src={"/Catur_1.png"} width={144} height={144} alt="" />
+          </div>
+          <div className="border border-r-0 border-black flex justify-center hover:bg-white">
+            {/* <Image src={"/PT_Duma_1.png"} width={144} height={144} alt="" /> */}
+          </div>
+          <div className="border border-r-0 border-black flex justify-center hover:bg-white">
+            {/* <Image src={"/PT_Duma_1.png"} width={144} height={144} alt="" /> */}
+          </div>
+          <div className="border border-r-0 border-black flex justify-center hover:bg-white">
+            {/* <Image src={"/PT_Duma_1.png"} width={144} height={144} alt="" /> */}
+          </div>
+          <div className="border border-black flex justify-center hover:bg-white">
+            {/* <Image src={"/PT_Duma_1.png"} width={144} height={144} alt="" /> */}
+          </div>
+        </div>
+        <h1 className="text-center text-5xl font-bold text-white my-16">Our Project</h1>
+        <div className="w-full grid grid-cols-3 gap-10">
+          <div className="project-info bg-light_gray_50 rounded-xl flex flex-col justify-center items-center">
+            <Image src={"/importir_1.png"} width={294} height={293} className="w-full" alt="" />
+            <div className="text-white font-bold relative -top-6 text-center">Website Importir</div>
+            <div className="project-info-part p-9">
+              <p className="text-black text-center text-xs font-bold">WEBSITE</p>
+              <div className="flex items-center justify-center text-2xl tracking-wider font-bold absolute left-0 right-0 top-0 bottom-0 px-5 px-5 text-center">Importir</div>
+            </div>
+          </div>
+          <div className="project-info bg-light_gray_50 rounded-xl flex flex-col justify-center items-center">
+            <Image src={"/san_pradana_1.png"} width={294} height={293} className="w-full" alt="" />
+            <div className="text-white font-bold relative -top-6 text-center">Website PT. San Pradana Teknik</div>
+            <div className="project-info-part p-9">
+              <p className="text-black text-center text-xs font-bold">WEBSITE</p>
+              <div className="flex items-center justify-center text-2xl tracking-wider font-bold absolute left-0 right-0 top-0 bottom-0 px-5 text-center">PT. San Pradana Teknik</div>
+            </div>
+          </div>
+          <div className="project-info bg-light_gray_50 rounded-xl flex flex-col justify-center items-center">
+            <Image src={"/gpm_11.png"} width={294} height={293} className="w-full" alt="" />
+            <div className="text-white font-bold relative -top-6 text-center">Website PT. Gading Persada Mandiri</div>
+            <div className="project-info-part p-9">
+              <p className="text-black text-center text-xs font-bold">WEBSITE</p>
+              <div className="flex items-center justify-center text-2xl tracking-wider font-bold absolute left-0 right-0 top-0 bottom-0 px-5 text-center">PT. Gading Persada Mandiri</div>
+            </div>
+          </div>
+          <div className="project-info bg-light_gray_50 rounded-xl flex flex-col justify-center items-center">
+            <Image src={"/yudatama_1.png"} width={294} height={293} className="w-full" alt="" />
+            <div className="text-white font-bold relative -top-6 text-center">Website PT. Stars Yudathama</div>
+            <div className="project-info-part p-9">
+              <p className="text-black text-center text-xs font-bold">WEBSITE</p>
+              <div className="flex items-center justify-center text-2xl tracking-wider font-bold absolute left-0 right-0 top-0 bottom-0 px-5 text-center">PT. Stars Yudathama</div>
+            </div>
+          </div>
+          <div className="project-info bg-light_gray_50 rounded-xl flex flex-col justify-center items-center">
+            <Image src={"/baselog_1.png"} width={294} height={293} className="w-full" alt="" />
+            <div className="text-white font-bold relative -top-6 text-center">Aplikasi BaseLog</div>
+            <div className="project-info-part p-9">
+              <p className="text-black text-center text-xs font-bold">APPLICATION</p>
+              <div className="flex items-center justify-center text-2xl tracking-wider font-bold absolute left-0 right-0 top-0 bottom-0 px-5 text-center">BaseLog</div>
+            </div>
+          </div>
+          <div className="project-info bg-light_gray_50 rounded-xl flex flex-col justify-center items-center">
+            <Image src={"/catur_11.png"} width={294} height={293} className="w-full" alt="" />
+            <div className="text-white font-bold relative -top-6 text-center">Website PT. Catur Pariwara Utama</div>
+            <div className="project-info-part p-9">
+              <p className="text-black text-center text-xs font-bold">WEBSITE</p>
+              <div className="flex items-center justify-center text-2xl tracking-wider font-bold absolute left-0 right-0 top-0 bottom-0 px-5 text-center">PT. Catur Pariwara Utama</div>
+            </div>
+          </div>
+          <div className="project-info bg-light_gray_50 rounded-xl flex flex-col justify-center items-center">
+            <Image src={"/admin_11.png"} width={294} height={293} className="w-full" alt="" />
+            <div className="text-white font-bold relative -top-6 text-center">POS metaWater</div>
+            <div className="project-info-part p-9">
+              <p className="text-black text-center text-xs font-bold">APPLICATION</p>
+              <div className="flex items-center justify-center text-2xl tracking-wider font-bold absolute left-0 right-0 top-0 bottom-0 px-5 text-center">POS metaWater</div>
+            </div>
+          </div>
+          <div className="project-info bg-light_gray_50 rounded-xl flex flex-col justify-center items-center">
+            <Image src={"/dinamika_1.png"} width={294} height={293} className="w-full" alt="" />
+            <div className="text-white font-bold relative -top-6 text-center">Website PT. Dinamika Network Consultant</div>
+            <div className="project-info-part p-9">
+              <p className="text-black text-center text-xs font-bold">WEBSITE</p>
+              <div className="flex items-center justify-center text-2xl tracking-wider font-bold absolute left-0 right-0 top-0 bottom-0 px-5 text-center">PT. Dinamika Network Consultant</div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="pb-5 pt-10 text-black bg-secondary_a flex justify-between px-2 md:px-14 xl:px-52">
         <div className="w-1/4">
           <Image src={"/logo.svg"} width={137} height={58} className="relative -left-1" alt="logo footer" />

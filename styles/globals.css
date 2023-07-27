@@ -44,3 +44,58 @@
 .drop-shadow-m {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+
+.service-info {
+  position: relative;
+  box-shadow: 8px 7px 4px 0px rgba(0, 0, 0, 0.25);
+  top: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.service-info:hover {
+  box-shadow: 8px 8px 4px 0px rgba(235, 187, 106, 0.65);
+  top: -20px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.project-info {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-info:hover .project-info-part {
+  top: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.project-info-part {
+  position: absolute;
+  content: "";
+  background: #F1F1F1;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.project-info-part p {
+  letter-spacing: 3px;
+}

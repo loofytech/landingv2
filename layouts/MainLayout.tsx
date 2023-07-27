@@ -82,11 +82,11 @@ export default function MainLayout({children}: LProps) {
       <div
         className={`h-full w-full flex items-center pr-10 gap-10 justify-center font-semibold ease-in-out duration-100 ${HEADER_COLOR_CSS}`}
       >
-        <Link href={"/"}>Home</Link>
-        <Link href={"/webdev"}>Web Development</Link>
-        <Link href={"/design"}>Product Design</Link>
-        <Link href={"/about"}>About</Link>
-        <Link href={"/contact"}>Contact</Link>
+        <Link href={"/"}>Beranda</Link>
+        <Link href={"/webdev"}>Layanan Kami</Link>
+        <Link href={"/design"}>Karir</Link>
+        <Link href={"/about"}>Tentang Kami</Link>
+        <Link href={"/contact"}>Kontak</Link>
       </div>
       <div>
         <button

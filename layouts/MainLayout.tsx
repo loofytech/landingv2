@@ -9,6 +9,7 @@ import Loading from "@/pages/loading";
 import NextNProgress from "nextjs-progressbar";
 import { useRouter } from "next/router";
 import { useEffectOnce } from "usehooks-ts";
+import Select from "react-select";
 
 const font = Roboto({
   subsets: ["latin"],
@@ -83,8 +84,15 @@ export default function MainLayout({children}: LProps) {
         className={`h-full w-full flex items-center pr-10 gap-10 justify-center font-semibold ease-in-out duration-100 ${HEADER_COLOR_CSS}`}
       >
         <Link href={"/"}>Beranda</Link>
-        <Link href={"/webdev"}>Layanan Kami</Link>
-        <Link href={"/design"}>Karir</Link>
+        <div className="head-dropdown">
+          <span>Layanan Kami</span>
+          <div className="head-dropdown-content">
+            <Link className="whitespace-nowrap hover:bg-gray_a" href={"/"}>Pembuatan Website</Link>
+            <Link className="whitespace-nowrap hover:bg-gray_a" href={"/"}>Pembuatan Program / Aplikasi</Link>
+            <Link className="whitespace-nowrap hover:bg-gray_a" href={"/design-product"}>Desain Produk</Link>
+          </div>
+        </div>
+        <Link href={"/design"}>Informasi</Link>
         <Link href={"/about"}>Tentang Kami</Link>
         <Link href={"/contact"}>Kontak</Link>
       </div>
@@ -101,7 +109,71 @@ export default function MainLayout({children}: LProps) {
       </div>
     </div>
     {children}
-    {/* {FLASH && <Loading />} */}
-    <NextNProgress color="#00529D" />
+    <div className="pb-5 pt-10 text-black bg-secondary_a flex justify-between px-2 md:px-14 xl:px-52">
+      <div className="w-1/4">
+        <Image src={"/logo.svg"} width={137} height={58} className="relative -left-1" alt="logo footer" />
+        <div className="text-xs mt-2">
+          Kami berdedikasi untuk menciptakan solusi inovatif digitalisasi Bisnis ataupun Produk anda. Dengan prinsip bekerja sepenuh hati untuk memberikan pengalaman terbaik kepada pelanggan, sehingga Anda dapat meraih potensi penuh dari teknologi dengan percaya diri dan tanpa beban finansial yang berlebihan.
+        </div>
+      </div>
+      <div className="">
+        <div>
+          <div className="whitespace-nowrap mb-5 font-bold">Layanan Kami</div>
+          <div className="flex flex-col gap-2 text-sm whitespace-nowrap">
+            <Link href={"#"}>Jasa Pembuatan Website</Link>
+            <Link href={"#"}>Jasa Pembuatan Aplikasi</Link>
+            <Link href={"#"}>Jasa Desain Produk</Link>
+          </div>
+        </div>
+      </div>
+      <div className="">
+        <div>
+          <div className="whitespace-nowrap mb-5 font-bold">Sosial Media</div>
+          <div className="flex gap-1.5 items-center relative -left-0.5">
+            <Link href={"#"}>
+              <Image src={"/LINKEDIN.svg"} width={26} height={26} alt="" />
+            </Link>
+            <Link href={"#"}>
+              <Image src={"/IG.svg"} width={26} height={26} alt="" />
+            </Link>
+            <Link href={"#"}>
+              <Image src={"/GITHUB.svg"} width={26} height={26} alt="" />
+            </Link>
+            <Link href={"#"}>
+              <Image src={"/FACEBOOK.svg"} width={26} height={26} alt="" />
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="" style={{width: "178px"}}>
+        <div className="whitespace-nowrap mb-5 font-bold">Kontak Kami</div>
+        <div className="flex flex-col gap-1.5">
+          <div className="flex items-center gap-1.5">
+            <Image src={"/Wablack.svg"} width={25} height={25} alt="" />
+            <div className="text-sm">+62853-7734-4144</div>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <Image src={"/Mail.svg"} width={25} height={25} alt="" />
+            <div className="text-sm">contact@loofytech.com</div>
+          </div>
+          <div className="flex items-start gap-1.5">
+            <Image src={"/Location.svg"} width={25} height={25} alt="" />
+            <div className="text-sm">Bandar Lampung, Lampung, Indonesia</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="py-2.5 bg-secondary_a flex justify-between items-center px-2 md:px-14 xl:px-52">
+      <div className="flex items-center gap-1.5 text-primary">
+        <Image src={"/ph_copyright-light.svg"} width={20} height={20} alt="" />
+        <span className="text-sm">2023 Loofytech | All Rights Reserved Copyright</span>
+      </div>
+      <div className="flex items-center gap-1.5 text-primary">
+        Design with
+        <Image src={"/made_love.svg"} width={12} height={11} alt="" />
+        by Loofyteam
+      </div>
+    </div>
+    <NextNProgress color="#0F3D3E" />
   </div>);
 }

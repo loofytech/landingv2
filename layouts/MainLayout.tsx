@@ -76,13 +76,11 @@ export default function MainLayout({children}: LProps) {
   }
 
   return (<div className={font.className}>
-    <div className="z-50 fixed top-0 bg-white w-full flex items-center py-5 px-2 md:px-14 xl:px-52 shadow">
+    <div className="z-50 fixed top-0 bg-white w-full flex items-center py-5 px-2 md:px-28 xl:px-64 shadow">
       <div className="relative top-1.5">
         <Image src={"/logo.svg"} width={197} height={58} alt="logo header" />
       </div>
-      <div
-        className={`h-full w-full flex items-center pr-10 gap-10 justify-center font-semibold ease-in-out duration-100 ${HEADER_COLOR_CSS}`}
-      >
+      <div className="h-full w-full flex items-center gap-10 justify-center font-semibold ease-in-out duration-100">
         <Link href={"/"}>Beranda</Link>
         <div className="head-dropdown">
           <span>Layanan Kami</span>
@@ -109,7 +107,7 @@ export default function MainLayout({children}: LProps) {
       </div>
     </div>
     {children}
-    <div className="pb-5 pt-10 text-black bg-secondary_a flex flex-col lg:flex-row justify-between px-2 md:px-14 xl:px-52">
+    <div className="pb-5 pt-10 text-black bg-secondary_a flex flex-col lg:flex-row justify-between px-2 md:px-28 xl:px-64">
       <div className="w-full md:w-1/4">
         <Image src={"/logo.svg"} width={137} height={58} className="relative -left-1" alt="logo footer" />
         <div className="text-xs mt-2">
@@ -163,7 +161,7 @@ export default function MainLayout({children}: LProps) {
         </div>
       </div>
     </div>
-    <div className="py-2.5 bg-secondary_a flex flex-col lg:flex-row justify-between items-center px-2 md:px-14 xl:px-52">
+    <div className="py-2.5 bg-secondary_a flex flex-col lg:flex-row justify-between items-center px-2 md:px-28 xl:px-64">
       <div className="flex items-center gap-1.5 text-primary">
         <Image src={"/ph_copyright-light.svg"} width={20} height={20} alt="" />
         <span className="text-sm">2023 Loofytech | All Rights Reserved Copyright</span>

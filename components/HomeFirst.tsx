@@ -20,10 +20,10 @@ export default function HomeFirst() {
 
   const settings = {
     centerMode: true,
-    centerPadding: "60px",
+    centerPadding: "22%",
     dots: false,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
     autoplay: true,
@@ -40,59 +40,10 @@ export default function HomeFirst() {
         slidesToScroll: 3
       }
     }],
-    beforeChange: (oldIndex: any, newIndex: any) => {
-      // let page = numItems > 8 ? 5 : numItems > 4 ? 2 : 0;
-      // console.log(winSize.width)
-      // if (newIndex > 0) {
-      //   setDisabled([false, false])
-
-      //   if (winSize.width > 1024) {
-      //     if (
-      //       ((numItems >= 1 && numItems <= 7) && newIndex >= 1) ||
-      //       ((numItems == 8) && newIndex >= 4) ||
-      //       ((numItems > 8) && newIndex >= 5) 
-      //     ) {
-      //       setDisabled([false, true])
-      //     }
-      //   }else{
-      //     console.log(newIndex)
-      //     if (
-      //       // ((numItems >= 1 && numItems <= 5) && newIndex >= 1) ||
-      //       // ((numItems >= 7 && numItems <= 8 ) && newIndex == 5) ||
-      //       ((numItems >= 1 && numItems <= 6 ) && newIndex >= 1) ||
-      //       ((numItems >= 7 && numItems <= 9 ) && newIndex >= 4) ||
-      //       // ((numItems == 9 ) && newIndex == 6) ||
-      //       ((numItems > 9) && newIndex >= 7) 
-      //     ) {
-      //       setDisabled([false, true])
-      //     }
-      //   }
-      // }else{
-      //   setDisabled([true, false])
-      // }
-    }
+    beforeChange: (oldIndex: any, newIndex: any) => {}
   }
 
   return (<>
-    {/* <Image
-      src={"/loofytech@1000p.png"}
-      width={301}
-      height={300}
-      className="cursor-pointer mt-16"
-      alt="logo home"
-      onClick={nextSection}
-    />
-    <h1 className="text-9xl text-black">Loofytech</h1> */}
-    {/* <div className="flex items-center">
-      <Image
-        src={"/loofytech@300p.png"}
-        width={61}
-        height={60}
-        alt=""
-        className="relative"
-      />
-      <span className="text-3xl relative -left-2 top-1" style={{zIndex: -1}}>Loofytech</span>
-    </div> */}
     <div className="h-screen bg-white_a relative flex flex-col justify-center items-center">
       <h1 className="text-6xl w-2/3 text-center text-primary font-bold mb-64">
         We Provide the Key to Unlock All Doors of Your Plans
@@ -101,7 +52,7 @@ export default function HomeFirst() {
         <Image src={"/jumbo.png"} width={500} height={500} alt="" />
       </div>
     </div>
-    <div className="h-screen bg-primary_a py-5 px-2 md:px-14 xl:px-52">
+    <div className="h-screen bg-primary_a py-5 px-2 md:px-28 xl:px-64">
       <div className="flex flex-col justify-center items-center relative top-36">
         <h1 className="text-5xl text-center font-bold text-secondary">What Your Plans ?</h1>
         <p className="text-white text-3xl mt-3 mb-5">Tell us what is your plan, your problems, and what’s on your mind.</p>
@@ -137,10 +88,10 @@ export default function HomeFirst() {
       </div>
     </div>
     <div>
-      <div className="h-screen bg-secondary_a flex flex-col justify-center items-center px-2 md:px-14 xl:px-52">
+      <div className="h-screen bg-secondary_a flex flex-col justify-center items-center px-2 md:px-28 xl:px-64">
         <h1 className="text-5xl text-center font-bold text-black">Why You Choose LoofyTech ?</h1>
-        <p className="text-2xl mt-3 mb-5 text-black">Build with Love, to give the best for You</p>
-        <div className="w-full">
+        <p className="text-2xl mt-3 text-black">Build with Love, to give the best for You</p>
+        <div className="w-full mt-14">
           <Slider {...settings} ref={slider}>
             <div className="">
               <div className="px-2">
@@ -193,7 +144,7 @@ export default function HomeFirst() {
           </Slider>
         </div>
       </div>
-      <div className="pb-20 bg-secondary_a px-2 md:px-14 xl:px-52">
+      <div className="pb-20 bg-secondary_a px-2 md:px-28 xl:px-64">
         <div className="gap-10 flex justify-between">
           <div className="w-80">
             <div className="px-8 py-12 bg-primary flex flex-col gap-0.5 rounded-lg service-info">
@@ -235,7 +186,7 @@ export default function HomeFirst() {
               </div>
               <div className="text-white flex items-center gap-2">
                 <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>GRATIS! DOMAIN .COM/CO.ID</span>
+                <span>GRATIS! DOMAIN .COM/.ID</span>
               </div>
               <div className="text-white flex items-center gap-2">
                 <Image src={"/check-circle.svg"} width={30} height={30} alt="" />

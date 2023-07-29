@@ -18,6 +18,7 @@ module.exports = {
         'primary_a': '#618E87',
         'secondary': '#DDAF52',
         'secondary_a': '#E2DCC8',
+        'secondary_b': '#C4B299',
         'white': '#F1F1F1',
         'white_a': '#FDFDFD',
         'gray': '#656564',

@@ -92,7 +92,7 @@ export default function MainLayout({children}: LProps) {
             <Link className="whitespace-nowrap hover:bg-gray_a" href={"/design-product"}>Desain Produk</Link>
           </div>
         </div>
-        <Link href={"/design"}>Informasi</Link>
+        <Link href={"/information"}>Informasi</Link>
         <Link href={"/about"}>Tentang Kami</Link>
         <Link href={"/contact"}>Kontak</Link>
       </div>

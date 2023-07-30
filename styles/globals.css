@@ -224,6 +224,12 @@
   background-size: 100% 100%;
 }
 
+/* .mm-brr {
+  background-image: url("/header2@4x_1.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+} */
+
 @media only screen and (max-width: 1024px) {
   .bg-wave {
     background-image: unset;

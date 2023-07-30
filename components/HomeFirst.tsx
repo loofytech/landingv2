@@ -33,13 +33,6 @@ export default function HomeFirst() {
     touchMove: true,     
     arrows: false,
     rows: 1,
-    responsive: [{
-      breakpoint: 1025,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3
-      }
-    }],
     beforeChange: (oldIndex: any, newIndex: any) => {}
   }
 
@@ -91,7 +84,7 @@ export default function HomeFirst() {
       <div className="h-screen bg-secondary_a flex flex-col justify-center items-center px-2 md:px-28 xl:px-64">
         <h1 className="text-5xl text-center font-bold text-black">Why You Choose LoofyTech ?</h1>
         <p className="text-2xl mt-3 text-black">Build with Love, to give the best for You</p>
-        <div className="w-full mt-14">
+        <div className="w-full px-20 mt-14">
           <Slider {...settings} ref={slider}>
             <div className="">
               <div className="px-2">
@@ -142,154 +135,6 @@ export default function HomeFirst() {
               </div>
             </div>
           </Slider>
-        </div>
-      </div>
-      <div className="pb-20 bg-secondary_a px-2 md:px-28 xl:px-64">
-        <div className="gap-10 flex justify-between">
-          <div className="w-80">
-            <div className="px-8 py-12 bg-primary flex flex-col gap-0.5 rounded-lg service-info">
-              <div className="text-3xl text-white text-center mb-5 font-bold">Basic</div>
-              <div className="text-center mb-10 font-bold">
-                <button className="text-primary px-8 py-2 rounded-full bg-secondary">Order Sekarang</button>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>5 Halaman</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>5 Hari Pengerjaan</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>1x Revisi</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>1 SEO Keyword</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>5 Page SEO Dasar</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>10 Upload Setup Gambar</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>+3 Akun Email</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>GRATIS! SSL</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>GRATIS! DOMAIN .COM/.ID</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>Mobile Friendly</span>
-              </div>
-            </div>
-          </div>
-          <div className="w-80">
-            <div className="px-8 py-12 bg-primary flex flex-col gap-0.5 rounded-lg service-info">
-              <div className="text-3xl text-white text-center mb-5 font-bold">Standard</div>
-              <div className="text-center mb-10 font-bold">
-                <button className="text-primary px-8 py-2 rounded-full bg-secondary">Order Sekarang</button>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>10 Halaman</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>14 Hari Pengerjaan</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>5x Revisi</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>3 SEO Keyword</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>50 Page SEO Dasar</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>10+ Upload Setup Gambar</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>+3 Akun Email</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>GRATIS! SSL</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>GRATIS! DOMAIN .COM/.ID</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>Mobile Friendly</span>
-              </div>
-            </div>
-          </div>
-          <div className="w-80">
-            <div className="px-8 py-12 bg-primary flex flex-col gap-0.5 rounded-lg service-info">
-              <div className="text-3xl text-white text-center mb-5 font-bold">Premium</div>
-              <div className="text-center mb-10 font-bold">
-                <button className="text-primary px-8 py-2 rounded-full bg-secondary">Order Sekarang</button>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>20 Halaman</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>1 Hari Pengerjaan</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>99x Revisi</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>99 SEO Keyword</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>99 Page SEO Dasar</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>99 Upload Setup Gambar</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>99 Akun Email</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>GRATIS! SSL</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>GRATIS! DOMAIN .COM/.ID</span>
-              </div>
-              <div className="text-white flex items-center gap-2">
-                <Image src={"/check-circle.svg"} width={30} height={30} alt="" />
-                <span>Mobile Friendly</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
       <div className="py-20 bg-primary_a flex flex-col justify-center items-center px-2 md:px-20 xl:px-72">

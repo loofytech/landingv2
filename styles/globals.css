@@ -2,38 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* html, body {
-  height: 100vh;
-  overflow: hidden;
+.or-design:hover {
+  background: #618E87;
 }
 
-.snap-container {
-  overflow: auto;
-  height: 100vh;
-  scroll-snap-points-y: repeat(100vh);
-  scroll-snap-type: y mandatory;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+.or-design:hover p {
+  color: #FFFFFF;
 }
-
-.snap-container::-webkit-scrollbar {
-  display: none;
-}
-
-.snap-item {
-  height: 100vh;
-  scroll-snap-align: start;
-  position: relative;
-}
-
-.flash {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 100;
-} */
 
 .ur-plan:hover {
   background: rgba(229, 223, 223, 0.70);
@@ -215,7 +190,7 @@
 
 .info-sldc {
   position: absolute;
-  top: 31%;
+  top: 280px;
   left: 50%;
   transform: translate(-50%);
   width: 230px;
@@ -238,9 +213,26 @@
 .bg-wave {
   background-image: url("/bg_wave_1.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100%;
   position: relative;
-  top: -150px;
+  top: -200px;
+}
+
+.wbgx {
+  background-image: url("/header@4x_1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .bg-wave {
+    background-image: unset;
+  }
+  .info-sldc {
+    width: 160px;
+    height: 160px;
+    font-size: 12px;
+  }
 }
 
 @keyframes anime-ss {

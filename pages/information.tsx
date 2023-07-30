@@ -86,22 +86,21 @@ export default function Information() {
       </div>
     </div>
     <div style={{height: 70, background: "#FFF"}}></div>
-    <div className="bg-secondary_a relative flex flex-col justify-center items-center text-xl text-center" style={{minHeight: 556}}>
+    <div className="bg-primary relative flex flex-col justify-center items-center text-xl text-center wbgx" style={{minHeight: 556}}>
       <div className="absolute -top-20">
         <Image src={"/jumbo.png"} width={500} height={500} alt="" />
       </div>
-      <div className="relative -bottom-28 text-5xl w-2/3 text-center text-primary font-bold">
+      <div className="relative -bottom-28 text-5xl w-2/3 text-center text-white font-bold">
         We Provide the Key to
         <br />
         Unlock All Doors of Your Plans
       </div>
       <div className="absolute bottom-10">
-        <button className="bg-primary text-white flex items-center gap-2 rounded-lg px-8 py-2">
-          <Image src={"/whatsapp.svg"} width={24} height={24} alt="logo whatsapp" />
+        <button className="bg-white text-primary flex items-center gap-2 rounded-lg px-8 py-2">
+          <Image src={"/formkit_whatsapp.svg"} width={24} height={24} alt="logo whatsapp" />
           <span className="">Ceritakan Rencana Anda</span>
         </button>
       </div>
     </div>
-    <div style={{height: 70, background: "#FFF"}}></div>
   </>);
 }

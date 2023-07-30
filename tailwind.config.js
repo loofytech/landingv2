@@ -25,7 +25,8 @@ module.exports = {
         'gray_a': 'rgba(101, 101, 100, 0.40)',
         'gray_b': '#D0D0D0',
         'light_gray_50': 'rgba(217, 217, 217, 0.20)',
-        'black': '#010101'
+        'black': '#010101',
+        'black_a': '#1E1E1E'
       }
     },
   },

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { useWindowSize } from "@/plugins/windowDimensions";
 import ProvidePart from "@/components/ProvidePart";
+import { NextSeo } from "next-seo";
+import Router, { useRouter } from "next/router";
 
 const apps = [
   "Website Perusahaan",
@@ -16,8 +18,32 @@ const apps = [
 
 export default function MakeWebsite() {
   const {width, height} = useWindowSize();
+  const router = useRouter();
 
   return (<>
+    <NextSeo
+      title={`Loofytech - Jasa Pembuatan Website Murah`}
+      description={`Loofytech adalah jasa, dibangun oleh tenaga profesional dan berpengalaman dibidangnya, cukup dengan modal 500.000`}
+      openGraph={{
+        title: "Loofytech - Jasa Pembuatan Website Murah",
+        description: `Loofytech adalah jasa, dibangun oleh tenaga profesional dan berpengalaman dibidangnya, cukup dengan modal 500.000`,
+        url: `https://loofytech.com${router.asPath}`,
+        images: [
+          {url: `https://loofytech.com/Loofy_Square_1.png`}
+        ],
+        siteName: "Loofytech - Jasa Pembuatan Website Murah"
+      }}
+      additionalMetaTags={[{
+        property: 'keywords',
+        content: 'loofytech, jasa it loofytech, jasa website loofytech, jasa aplikasi loofytech, jasa design produk loofytech, loofytech konsultan, loofytech consultant, aplikasi kantor loofytech, aplikasi kasir loofytech, aplikasi pembayaran loofytech, aplikasi pergudangan loofytech, it loofy, loofytech digital'
+      }, {
+        name: 'application-name',
+        content: 'Loofytech - Jasa Pembuatan Website Murah'
+      }, {
+        httpEquiv: 'x-ua-compatible',
+        content: 'IE=edge; chrome=1'
+      }]}
+    />
     <div style={{height: 200}} className="bg-secondary_a flex justify-center items-center text-xl text-center font-bold">
       <div className="relative -bottom-11">
         <h1 className="mb-0 px-5 tracking-wide">LAYANAN KAMI</h1>

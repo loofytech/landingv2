@@ -2,6 +2,8 @@ import { useRef } from "react";
 import { useWindowSize } from "@/plugins/windowDimensions";
 import Image from "next/image";
 import Slider from "react-slick";
+import { NextSeo } from "next-seo";
+import { useRouter } from "next/router";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -10,6 +12,7 @@ export default function DesignProduct() {
   const slider2 = useRef<any>(null);
   const slider3 = useRef<any>(null);
   const {width} = useWindowSize();
+  const router = useRouter();
 
   const settings = {
     centerMode: true,
@@ -51,6 +54,29 @@ export default function DesignProduct() {
   }
 
   return (<>
+    <NextSeo
+      title={`Loofytech - Jasa Design Produk Murah`}
+      description={`Loofytech adalah jasa, dibangun oleh tenaga profesional dan berpengalaman dibidangnya, cukup dengan modal 500.000`}
+      openGraph={{
+        title: "Loofytech - Jasa Design Produk Murah",
+        description: `Loofytech adalah jasa, dibangun oleh tenaga profesional dan berpengalaman dibidangnya, cukup dengan modal 500.000`,
+        url: `https://loofytech.com${router.asPath}`,
+        images: [
+          {url: `https://loofytech.com/Loofy_Square_1.png`}
+        ],
+        siteName: "Loofytech - Jasa Design Produk Murah"
+      }}
+      additionalMetaTags={[{
+        property: 'keywords',
+        content: 'loofytech, jasa it loofytech, jasa website loofytech, jasa aplikasi loofytech, jasa design produk loofytech, loofytech konsultan, loofytech consultant, aplikasi kantor loofytech, aplikasi kasir loofytech, aplikasi pembayaran loofytech, aplikasi pergudangan loofytech, it loofy, loofytech digital'
+      }, {
+        name: 'application-name',
+        content: 'Loofytech - Jasa Design Produk Murah'
+      }, {
+        httpEquiv: 'x-ua-compatible',
+        content: 'IE=edge; chrome=1'
+      }]}
+    />
     <div className="dp-section-1 px-2 md:px-14 xl:px-52">
       <h1 className="text-2xl font-bold text-center text-primary select-none relative top-14 md:top-0 md:text-5xl">Desain Produk yang Menggambarkan Identitas Anda, Ungkapkan Cerita Diri Anda!</h1>
       <div className="w-full flex items-start mt-24 gap-10 flex-col md:flex-row">

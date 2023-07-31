@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useWindowSize } from "@/plugins/windowDimensions";
+import { NextSeo } from "next-seo";
+import { useRouter } from "next/router";
 
 const sdlcs = [
   {
@@ -85,12 +87,36 @@ export default function MakeApplication() {
   const [showInfo, setShowInfo] = useState<string>("Identifikasi dan pemahaman Kebutuhan Aplikasi yang akan dikembangkan.");
 
   const {width, height} = useWindowSize();
+  const router = useRouter();
 
   const handleSDLC = (param: string) => {
     setShowInfo(param);
   }
 
   return (<>
+    <NextSeo
+      title={`Loofytech - Jasa Pembuatan Aplikasi Murah`}
+      description={`Loofytech adalah jasa, dibangun oleh tenaga profesional dan berpengalaman dibidangnya, cukup dengan modal 500.000`}
+      openGraph={{
+        title: "Loofytech - Jasa Pembuatan Aplikasi Murah",
+        description: `Loofytech adalah jasa, dibangun oleh tenaga profesional dan berpengalaman dibidangnya, cukup dengan modal 500.000`,
+        url: `https://loofytech.com${router.asPath}`,
+        images: [
+          {url: `https://loofytech.com/Loofy_Square_1.png`}
+        ],
+        siteName: "Loofytech - Jasa Pembuatan Aplikasi Murah"
+      }}
+      additionalMetaTags={[{
+        property: 'keywords',
+        content: 'loofytech, jasa it loofytech, jasa website loofytech, jasa aplikasi loofytech, jasa design produk loofytech, loofytech konsultan, loofytech consultant, aplikasi kantor loofytech, aplikasi kasir loofytech, aplikasi pembayaran loofytech, aplikasi pergudangan loofytech, it loofy, loofytech digital'
+      }, {
+        name: 'application-name',
+        content: 'Loofytech - Jasa Pembuatan Aplikasi Murah'
+      }, {
+        httpEquiv: 'x-ua-compatible',
+        content: 'IE=edge; chrome=1'
+      }]}
+    />
     <div style={{height: 200}} className="bg-secondary_a flex justify-center items-center text-xl text-center font-bold">
       <div className="relative -bottom-11">
         <h1 className="mb-0 px-5 tracking-wide">LAYANAN KAMI</h1>

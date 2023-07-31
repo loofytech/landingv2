@@ -1,8 +1,35 @@
 import ProvidePart from "@/components/ProvidePart";
 import Image from "next/image";
+import { NextSeo } from "next-seo";
+import { useRouter } from "next/router";
 
 export default function Information() {
+  const router = useRouter();
+
   return (<>
+    <NextSeo
+      title={`Loofytech - Informasi bagi hasil`}
+      description={`Loofytech adalah jasa, dibangun oleh tenaga profesional dan berpengalaman dibidangnya, cukup dengan modal 500.000`}
+      openGraph={{
+        title: "Loofytech - Informasi bagi hasil",
+        description: `Loofytech adalah jasa, dibangun oleh tenaga profesional dan berpengalaman dibidangnya, cukup dengan modal 500.000`,
+        url: `https://loofytech.com${router.asPath}`,
+        images: [
+          {url: `https://loofytech.com/Loofy_Square_1.png`}
+        ],
+        siteName: "Loofytech - Informasi bagi hasil"
+      }}
+      additionalMetaTags={[{
+        property: 'keywords',
+        content: 'loofytech, jasa it loofytech, jasa website loofytech, jasa aplikasi loofytech, jasa design produk loofytech, loofytech konsultan, loofytech consultant, aplikasi kantor loofytech, aplikasi kasir loofytech, aplikasi pembayaran loofytech, aplikasi pergudangan loofytech, it loofy, loofytech digital'
+      }, {
+        name: 'application-name',
+        content: 'Loofytech - Informasi bagi hasil'
+      }, {
+        httpEquiv: 'x-ua-compatible',
+        content: 'IE=edge; chrome=1'
+      }]}
+    />
     <div className="bg-white_a flex flex-col justify-center items-center overflow-hidden">
       <div className="w-full relative" style={{boxShadow: "0px 1px 4px 0px rgba(0, 0, 0, 0.25)", height: 200, zIndex: 2}} />
       <div className="i-s1 w-full bg-white" style={{boxShadow: "0px 1px 4px 0px rgba(0, 0, 0, 0.25)"}}>

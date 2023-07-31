@@ -91,9 +91,9 @@ export default function MainLayout({children}: LProps) {
         <div>
           <div className="whitespace-nowrap mb-5 font-bold relative top-3 md:top-0">Layanan Kami</div>
           <div className="flex flex-col gap-0.5 md:gap-2 text-sm whitespace-nowrap">
-            <Link href={"#"}>Jasa Pembuatan Website</Link>
-            <Link href={"#"}>Jasa Pembuatan Aplikasi</Link>
-            <Link href={"#"}>Jasa Desain Produk</Link>
+            <Link href={"/make-website"}>Jasa Pembuatan Website</Link>
+            <Link href={"/make-application"}>Jasa Pembuatan Aplikasi</Link>
+            <Link href={"/design-product"}>Jasa Desain Produk</Link>
           </div>
         </div>
       </div>
@@ -101,16 +101,16 @@ export default function MainLayout({children}: LProps) {
         <div>
           <div className="whitespace-nowrap mb-5 font-bold relative top-3 md:top-0">Sosial Media</div>
           <div className="flex gap-1.5 items-center relative -left-0.5">
-            <Link href={"#"}>
+            <Link href={"https://www.linkedin.com"} target="_blank">
               <Image src={"/LINKEDIN.svg"} width={26} height={26} alt="" />
             </Link>
-            <Link href={"#"}>
+            <Link href={"https://www.instagram.com"} target="_blank">
               <Image src={"/IG.svg"} width={26} height={26} alt="" />
             </Link>
-            <Link href={"#"}>
+            <Link href={"https://github.com"} target="_blank">
               <Image src={"/GITHUB.svg"} width={26} height={26} alt="" />
             </Link>
-            <Link href={"#"}>
+            <Link href={"https://facebook.com"} target="_blank">
               <Image src={"/FACEBOOK.svg"} width={26} height={26} alt="" />
             </Link>
           </div>

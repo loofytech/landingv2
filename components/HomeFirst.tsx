@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useRef, useState } from "react";
 import Link from "next/link";
 import { useWindowSize } from "@/plugins/windowDimensions";
+import BoxClient from "./BoxClient";
 
 export default function HomeFirst() {
   const slider = useRef<any>(null);
@@ -42,13 +43,17 @@ export default function HomeFirst() {
     <style global jsx>{`
       body {
         background-image: url("/header2@4x_1.png");
-        background-repeat: repeat;
+        background-repeat: no-repeat;
         background-size: 100%;
+        background-attachment: fixed;
+        background-size: cover;
       }
     `}</style>
     <div className="bg-transparent relative flex flex-col justify-center items-center">
       <h1 className="w-2/3 text-center text-primary font-bold mt-36 text-2xl md:text-4xl lg:text-6xl">
-        We Provide the Key to Unlock All Doors of Your Plans
+        We Provide the Key to
+        <br />
+        Unlock All Doors of Your Plans
       </h1>
       <div className="relative -top-20">
         <Image src={"/jumbo.png"} width={500} height={500} alt="" />
@@ -145,57 +150,9 @@ export default function HomeFirst() {
         </Slider>
       </div>
     </div>
+    <BoxClient />
     <div className="bg-transparent py-20 flex flex-col justify-center items-center px-2 md:px-20 xl:px-72">
-      {/* <h1 className="text-center text-5xl font-bold text-white mb-16">Our Client</h1> */}
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-5">
-        <div className="box-client">
-          <Image src={"/Dinamika_Network_1.png"} width={114} height={114} alt="" />
-        </div>
-        <div className="box-client">
-          <Image src={"/PT_Duma_1.png"} width={114} height={114} alt="" />
-        </div>
-        <div className="box-client">
-          <Image src={"/Stars_1.png"} width={114} height={114} alt="" />
-        </div>
-        <div className="box-client">
-          <Image src={"/Liffe_1.png"} width={114} height={114} alt="" />
-        </div>
-        <div className="box-client">
-          <Image src={"/Meta_1.png"} width={114} height={114} alt="" />
-        </div>
-        <div className="box-client">
-          <Image src={"/SMK_1.png"} width={114} height={114} alt="" />
-        </div>
-        <div className="box-client">
-          <Image src={"/GPM_1.png"} width={114} height={114} alt="" />
-        </div>
-        <div className="box-client">
-          <Image src={"/Catur_1.png"} width={114} height={114} alt="" />
-        </div>
-        <div className="box-client">
-          <Image src={"/importir_2.png"} width={114} height={114} alt="" />
-        </div>
-        <div className="box-client">
-          <Image src={"/importir_5.png"} width={114} height={114} alt="" />
-        </div>
-        <div className="box-client">
-          <Image src={"/ESD_1.png"} width={114} height={114} alt="" />
-        </div>
-        <div className="box-client">
-          <Image src={"/importir_3.png"} width={114} height={114} alt="" />
-        </div>
-        <div className="box-client">
-          {/*  */}
-        </div>
-        <div className="box-client">
-          {/*  */}
-        </div>
-        <div className="box-client">
-          {/*  */}
-        </div>
-      </div>
-      {/* <h1 className="text-center text-5xl font-bold text-white my-16">Our Project</h1> */}
-      <div className="mt-20 w-full grid grid-cols-1 md:grid-cols-3 gap-10 px-5 md:mx-0">
+      <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-10 px-5 md:mx-0">
         <div className="project-info bg-light_gray_50 rounded-xl flex flex-col justify-center items-center">
           <Image src={"/importir_1.png"} width={294} height={293} className="w-full" alt="" />
           <div className="text-primary font-bold relative -top-6 text-center">Website Importir</div>
@@ -258,6 +215,14 @@ export default function HomeFirst() {
           <div className="project-info-part p-9">
             <p className="text-black text-center text-xs font-bold">WEBSITE</p>
             <div className="flex items-center justify-center text-2xl tracking-wider font-bold absolute left-0 right-0 top-0 bottom-0 px-5 text-center">PT. Dinamika Network Consultant</div>
+          </div>
+        </div>
+        <div className="project-info bg-light_gray_50 rounded-xl flex flex-col justify-center items-center">
+          <Image src={"/e_learning.png"} width={294} height={293} className="w-full" alt="" />
+          <div className="text-primary font-bold relative -top-6 text-center">Aplikasi E-Learning</div>
+          <div className="project-info-part p-9">
+            <p className="text-black text-center text-xs font-bold">APPLICATION</p>
+            <div className="flex items-center justify-center text-2xl tracking-wider font-bold absolute left-0 right-0 top-0 bottom-0 px-5 text-center">E-Learning</div>
           </div>
         </div>
       </div>

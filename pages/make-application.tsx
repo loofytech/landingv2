@@ -243,23 +243,47 @@ export default function MakeApplication() {
           <h1 className="text-xl text-center font-bold text-primary">Kami adalah tempat yang Tepat</h1>
           <p className="italic text-sm text-center text-primary">Kami akan memberikan Solusi dan Inovasi untuk Bisnis anda</p>
           <div className="flex flex-wrap justify-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
-            <div className="bg-primary rounded flex items-center justify-center p-5" style={{width: width < 768 ? 160 : 180, height: width < 768 ? 160 : 180}}>
+            <div className="bg-primary rounded flex items-center justify-center p-5 siuu" style={{width: width < 768 ? 160 : 180, height: width < 768 ? 160 : 180}}>
               <Image src={"/Harga.png"} width={200} height={200} alt="" />
+              <div>
+                <h4 className="text-center font-bold mb-2 text-sm">Harga Negotiable</h4>
+                <p className="text-center text-xs">Dapatkan Aplikasi yang anda butuhkan denga harga terbaik! Jangan ragu untuk bernegosiasi, kami siap memberikan penawaran spesial khusus untuk Anda</p>
+              </div>
             </div>
-            <div className="bg-primary rounded flex items-center justify-center p-5" style={{width: width < 768 ? 160 : 180, height: width < 768 ? 160 : 180}}>
+            <div className="bg-primary rounded flex items-center justify-center p-5 siuu" style={{width: width < 768 ? 160 : 180, height: width < 768 ? 160 : 180}}>
               <Image src={"/Skalabilitas.png"} width={200} height={200} alt="" />
+              <div>
+                <h4 className="text-center font-bold mb-2 text-sm">Skalabilitas</h4>
+                <p className="text-center text-xs">Tim kami memiliki pengetahuan mendalam tentang teknologi terbaru dan praktik terbaik, sehingga dapat memberikan solusi yang tepat dan inovatif untuk Aplikasi anda.</p>
+              </div>
             </div>
-            <div className="bg-primary rounded flex items-center justify-center p-5" style={{width: width < 768 ? 160 : 180, height: width < 768 ? 160 : 180}}>
+            <div className="bg-primary rounded flex items-center justify-center p-5 siuu" style={{width: width < 768 ? 160 : 180, height: width < 768 ? 160 : 180}}>
               <Image src={"/Speed.png"} width={200} height={200} alt="" />
+              <div>
+                <h4 className="text-center font-bold mb-2 text-sm">Fleksibel</h4>
+                <p className="text-center text-xs">Sesuaikan tampilan, fitur, dan fungsionalitas sesuai dengan preferensi Anda sendiri. rasakan keajaiban fleksibilitas aplikasi untuk mencapai potensi penuh bisnis Anda.</p>
+              </div>
             </div>
-            <div className="bg-primary rounded flex items-center justify-center p-5" style={{width: width < 768 ? 160 : 180, height: width < 768 ? 160 : 180}}>
+            <div className="bg-primary rounded flex items-center justify-center p-5 siuu" style={{width: width < 768 ? 160 : 180, height: width < 768 ? 160 : 180}}>
               <Image src={"/Server.png"} width={200} height={200} alt="" />
+              <div>
+                <h4 className="text-center font-bold mb-2 text-sm">Server</h4>
+                <p className="text-center text-xs">Dengan kecepatan tinggi dan kapasitas yang luas, Server aplikasi kami adalah jawaban atas segala kebutuhan performa dan kehandalan dalam menjalankan aplikasi Anda.</p>
+              </div>
             </div>
-            <div className="bg-primary rounded flex items-center justify-center p-5" style={{width: width < 768 ? 160 : 180, height: width < 768 ? 160 : 180}}>
+            <div className="bg-primary rounded flex items-center justify-center p-5 siuu" style={{width: width < 768 ? 160 : 180, height: width < 768 ? 160 : 180}}>
               <Image src={"/Security.png"} width={200} height={200} alt="" />
+              <div>
+                <h4 className="text-center font-bold mb-2 text-sm">Keamanan</h4>
+                <p className="text-center text-xs">Privasi dan keamanan data Anda dengan sempurna! Sistem keamanan terbaik untuk melindungi informasi berharga Anda dari ancaman cyber dan intrusi yang berbahaya.</p>
+              </div>
             </div>
-            <div className="bg-primary rounded flex items-center justify-center p-5" style={{width: width < 768 ? 160 : 180, height: width < 768 ? 160 : 180}}>
+            <div className="bg-primary rounded flex items-center justify-center p-5 siuu" style={{width: width < 768 ? 160 : 180, height: width < 768 ? 160 : 180}}>
               <Image src={"/setting_1.png"} width={200} height={200} alt="" />
+              <div>
+                <h4 className="text-center font-bold mb-2 text-sm">Pemeliharaan</h4>
+                <p className="text-center text-xs">Dengan pemeliharaan rutin yang kami tawarkan, aplikasi Anda akan selalu diperbarui dengan teknologi terbaru dan dijamin berjalan lancar tanpa hambatan.</p>
+              </div>
             </div>
           </div>
         </div>

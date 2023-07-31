@@ -11,6 +11,7 @@ import { useRouter } from "next/router";
 import { useEffectOnce } from "usehooks-ts";
 import Select from "react-select";
 import Logo from "@/components/Logo";
+import Header from "@/components/Header";
 
 const font = Roboto({
   subsets: ["latin"],
@@ -77,36 +78,7 @@ export default function MainLayout({children}: LProps) {
   }
 
   return (<div className={font.className}>
-    <div className="z-50 fixed top-0 bg-white w-full flex justify-between items-center py-5 px-2 md:px-28 xl:px-64 shadow">
-      <div className="relative top-1">
-        <Logo width={144} height={48} color="#010101" />
-      </div>
-      <div className="h-full gap-10 font-semibold justify-center items-center hidden md:flex">
-        <Link href={"/"}>Beranda</Link>
-        <div className="head-dropdown">
-          <span>Layanan Kami</span>
-          <div className="head-dropdown-content">
-            <Link className="whitespace-nowrap hover:bg-gray_a" href={"/make-website"}>Pembuatan Website</Link>
-            <Link className="whitespace-nowrap hover:bg-gray_a" href={"/make-application"}>Pembuatan Program / Aplikasi</Link>
-            <Link className="whitespace-nowrap hover:bg-gray_a" href={"/design-product"}>Desain Produk</Link>
-          </div>
-        </div>
-        <Link href={"/information"}>Informasi</Link>
-        <Link href={"/about"}>Tentang Kami</Link>
-        <Link href={"/contact"}>Kontak</Link>
-      </div>
-      {/* <div className="hidden md:contents">
-        <button
-          type="button"
-          className="gap-2 font-semibold w-36 h-10 relative text-white rounded-lg bg-primary"
-        >
-          <div className="flex justify-center items-center gap-2 absolute w-full right-0 top-0 bottom-0 left-0">
-            <Image src={"/whatsapp.svg"} width={24} height={24} alt="logo whatsapp" />
-            <span className="">Konsultasi</span>
-          </div>
-        </button>
-      </div> */}
-    </div>
+    <Header />
     {children}
     <div className="pb-5 pt-10 text-white bg-black_a flex flex-col md:flex-row justify-between px-4 md:px-28 xl:px-64">
       <div className="w-full md:w-1/4">

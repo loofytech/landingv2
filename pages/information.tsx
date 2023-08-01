@@ -114,6 +114,6 @@ export default function Information() {
       </div>
     </div>
     <div style={{height: 70, background: "#FFF"}}></div>
-    <ProvidePart waMessage="Halo, saya tertarik dengan informasi yang anda lampirkan di loofytech, Bersediakah anda meluangkan waktu untuk berkomunikasi dengan saya?" />
+    <ProvidePart label="Ceritakan Rencana Anda" waMessage="Halo, Saya telah mengakses https://loofytech.com/information - saya ingin menyampaikan beberapa rencana saya" />
   </>);
 }

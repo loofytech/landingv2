@@ -82,7 +82,7 @@ export default function DesignProduct() {
       <h1 className="text-2xl font-bold text-center text-primary select-none relative top-14 md:top-0 md:text-5xl">Desain Produk yang Menggambarkan Identitas Anda, Ungkapkan Cerita Diri Anda!</h1>
       <div className="w-full flex items-start mt-24 gap-10 flex-col md:flex-row">
         <div className="select-none relative w-full md:w-1/2">
-          <h3 className="text-primary text-xl font-bold mb-3 md:text-2xl">Desain Logo Perusahaan / Usaha Anda</h3>
+          <h3 className="text-primary text-xl font-bold mb-3 text-center md:text-left md:text-2xl">Desain Logo Perusahaan / Usaha Anda</h3>
           <p className="text-sm italic">Kami senang dapat memberikan penawaran jasa desain logo untuk membantu memperkuat identitas merek Anda. Dengan kombinasi kreativitas, profesionalisme, dan keahlian dalam desain grafis, kami siap menciptakan logo yang unik dan mengesankan untuk merek Anda.</p>
         </div>
         <div style={{width: width < 768 ? "100%" : 500}}>
@@ -147,7 +147,7 @@ export default function DesignProduct() {
         </div>
       </div>
     </div>
-    <div className="flex flex-col justify-center items-center px-2 mb-10 md:mb-28 md:px-14 xl:px-52">
+    <div className="flex flex-col justify-center items-center px-2 mt-10 mb-10 md:mt-0 md:mb-28 md:px-14 xl:px-52">
       <div className="w-full flex items-start gap-10 mt-0 flex-col flex-col-reverse md:mt-24 md:flex-row">
         <div style={{width: width < 768 ? "100%" : 500}}>
           <Slider {...settings} ref={slider2}>
@@ -182,13 +182,13 @@ export default function DesignProduct() {
           </Slider>
         </div>
         <div className="w-full md:w-1/2 select-none">
-          <h3 className="text-primary text-2xl font-bold text-center mb-3">Desain Profil Perusahaan / Usaha Anda</h3>
+          <h3 className="text-primary text-xl font-bold text-center md:text-left mb-3">Desain Profil Perusahaan / Usaha Anda</h3>
           <p className="text-sm italic">Kami senang dapat memberikan penawaran jasa desain logo untuk membantu memperkuat identitas merek Anda. Dengan kombinasi kreativitas, profesionalisme, dan keahlian dalam desain grafis, kami siap menciptakan logo yang unik dan mengesankan untuk merek Anda.</p>
         </div>
       </div>
     </div>
     <div className="dp-section-3 px-2 md:px-14 xl:px-52">
-      <h1 className="text-2xl md:text-5xl font-bold text-center text-primary mb-3 select-none">Desain Stationary Perusahaan / Usaha Anda</h1>
+      <h1 className="text-xl md:text-5xl font-bold text-center text-primary mb-3 select-none">Desain Stationary Perusahaan / Usaha Anda</h1>
       <h3 className="italic text-center text-primary select-none text-sm md:text-normal">Kami dengan senang hati ingin menawarkan jasa desain stationary perusahaan untuk membantu memperkuat citra dan profesionalisme bisnis Anda. Pengalaman kami mencakup desain stationary, brosur, poster, Mock up untuk ATK (Pulpen, Name Tag, Amplop) dan berbagai materi pemasaran.</h3>
       <div className="w-full mt-10 md:mt-20">
         <Slider {...settings2} ref={slider3}>
@@ -229,7 +229,7 @@ export default function DesignProduct() {
           style={{filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}
           onClick={() => directWa("Halo, saya ingin berdiskusi dengan anda terkait company profile yang ingin saya bangun. Bisakah anda meluangkan waktu untuk berkomunikasi dengan saya?")}
         >
-          Buat Company Profile Anda
+          Desain Produk Anda Sekarang
         </button>
       </div>
     </div>

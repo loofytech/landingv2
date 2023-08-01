@@ -3,22 +3,47 @@ import { useWindowSize } from "@/plugins/windowDimensions";
 import ProvidePart from "@/components/ProvidePart";
 import { NextSeo } from "next-seo";
 import Router, { useRouter } from "next/router";
-
-const apps = [
-  "Website Perusahaan",
-  "Website Penjualan",
-  "Website Pemerintahan",
-  "Website UMKM",
-  "Website Sekolah",
-  "Website Personal",
-  "Website Katalog Produk",
-  "Website Organisasi",
-  "Website Kampus"
-];
+import { useRef } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { directWa } from "@/plugins/globalFunction";
 
 export default function MakeWebsite() {
+  const slidePrice = useRef<any>(null);
   const {width, height} = useWindowSize();
   const router = useRouter();
+
+  const apps = [
+    "Website Perusahaan",
+    "Website Penjualan",
+    "Website Pemerintahan",
+    "Website UMKM",
+    "Website Sekolah",
+    "Website Personal",
+    "Website Katalog Produk",
+    "Website Organisasi",
+    "Website Kampus"
+  ];
+
+  const settings = {
+    centerMode: true,
+    centerPadding: "0",
+    dots: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    autoplay: true,
+    draggable: true,
+    swipe: true,
+    swipeToSlide: true,
+    touchMove: true,     
+    arrows: false,
+    rows: 1,
+    rtl: true,
+    beforeChange: (oldIndex: any, newIndex: any) => {}
+  }
 
   return (<>
     <NextSeo
@@ -140,153 +165,384 @@ export default function MakeWebsite() {
           </div>
         </div>
       </div>
-      <div className="gap-10 flex justify-between relative top-40 flex-col pb-48 md:pb-0 md:flex-row">
-        <div className="w-80">
-          <div className="px-8 py-12 bg-primary flex flex-col gap-0.5 rounded-lg service-info">
-            <div className="text-3xl text-white text-center mb-5 font-bold">Basic</div>
-            <div className="text-center mb-10 font-bold">
-              <button className="text-primary px-8 py-2 rounded-full bg-secondary">Order Sekarang</button>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>5 Halaman</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>5 Hari Pengerjaan</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>1x Revisi</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>1 SEO Keyword</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>5 Page SEO Dasar</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>10 Upload Setup Gambar</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>+3 Akun Email</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>GRATIS! SSL</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>GRATIS! DOMAIN .COM/.ID</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>Mobile Friendly</span>
-            </div>
-          </div>
-        </div>
-        <div className="w-80">
-          <div className="px-8 py-12 bg-primary flex flex-col gap-0.5 rounded-lg service-info">
-            <div className="text-3xl text-white text-center mb-5 font-bold">Standard</div>
-            <div className="text-center mb-10 font-bold">
-              <button className="text-primary px-8 py-2 rounded-full bg-secondary">Order Sekarang</button>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>10 Halaman</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>14 Hari Pengerjaan</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>5x Revisi</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>3 SEO Keyword</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>50 Page SEO Dasar</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>10+ Upload Setup Gambar</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>+3 Akun Email</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>GRATIS! SSL</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>GRATIS! DOMAIN .COM/.ID</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>Mobile Friendly</span>
+      <div className="w-full slick-price relative px-5 top-28 pb-28 md:px-0 md:w-auto md:pb-0">
+        {width != 0 && width <= 767 ? <Slider {...settings} ref={slidePrice}>
+          {/* Basic */}
+          <div className="px-2 text-sm">
+            <div className="px-8 py-12 bg-primary flex flex-col gap-0.5 rounded-lg service-info">
+              <div className="text-3xl text-white text-center mb-5 font-bold">Basic</div>
+              <div className="text-center mb-10 font-bold">
+                <button
+                  className="text-primary px-8 py-2 rounded-full bg-secondary"
+                  onClick={() => directWa("Halo, Saya telah mengakses https://loofytech.com - saya tertarik membuat Website dengan “Paket Basic” dapatkah anda menjelaskan rinciannya ?")}
+                >
+                  Order Sekarang
+                </button>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>3 Halaman</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>UI/UX Desain Simpel</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>User & Mobile Friendly</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>CTA WhatsApp</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Free Domain</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Maintenance Web</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Sertifikat SSL</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Request Fitur</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Optimasi SEO</span>
+              </div>
+              <div className="text-white flex items-center  gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Konten Manajemen</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Bonus Logo Usaha</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Harga Negotiable</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="w-80">
-          <div className="px-8 py-12 bg-primary flex flex-col gap-0.5 rounded-lg service-info">
-            <div className="text-3xl text-white text-center mb-5 font-bold">Premium</div>
-            <div className="text-center mb-10 font-bold">
-              <button className="text-primary px-8 py-2 rounded-full bg-secondary">Order Sekarang</button>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>20 Halaman</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>1 Hari Pengerjaan</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>99x Revisi</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>99 SEO Keyword</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>99 Page SEO Dasar</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>99 Upload Setup Gambar</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>99 Akun Email</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>GRATIS! SSL</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>GRATIS! DOMAIN .COM/.ID</span>
-            </div>
-            <div className="text-white flex items-center gap-2">
-              <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
-              <span>Mobile Friendly</span>
+          {/* Standart */}
+          <div className="px-2 text-sm">
+            <div className="px-8 py-12 bg-primary flex flex-col gap-0.5 rounded-lg service-info">
+              <div className="text-3xl text-white text-center mb-5 font-bold">Standard</div>
+              <div className="text-center mb-10 font-bold">
+                <button
+                  className="text-primary px-8 py-2 rounded-full bg-secondary"
+                  onClick={() => directWa("Halo, Saya telah mengakses https://loofytech.com - saya tertarik membuat Website dengan “Paket Standar” dapatkah anda menjelaskan rinciannya ?")}
+                >
+                  Order Sekarang
+                </button>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>5 Halaman</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>UI/UX Desain Simpel</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>User & Mobile Friendly</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>CTA WhatsApp</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Free Domain</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Maintenance Web</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Sertifikat SSL</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Request Fitur</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Optimasi SEO</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Konten Manajemen</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Bonus Logo Usaha</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Harga Negotiable</span>
+              </div>
             </div>
           </div>
-        </div>
+          {/* Premium */}
+          <div className="px-2 text-sm">
+            <div className="px-8 py-12 bg-primary flex flex-col gap-0.5 rounded-lg service-info">
+              <div className="text-3xl text-white text-center mb-5 font-bold">Premium</div>
+              <div className="text-center mb-10 font-bold">
+                <button
+                  className="text-primary px-8 py-2 rounded-full bg-secondary"
+                  onClick={() => directWa("Halo, Saya telah mengakses https://loofytech.com - saya tertarik membuat Website dengan “Paket Premium” dapatkah anda menjelaskan rinciannya ?")}
+                >
+                  Order Sekarang
+                </button>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Lebih dari 5 Halaman</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>UI/UX Desain Simpel</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>User & Mobile Friendly</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>CTA WhatsApp</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Free Domain</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Maintenance Web</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Sertifikat SSL</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Request Fitur</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Optimasi SEO</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Konten Manajemen</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Bonus Logo Usaha</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Harga Negotiable</span>
+              </div>
+            </div>
+          </div>
+        </Slider> : <div className="gap-6 flex justify-between flex-col md:flex-row">
+          {/* Basic */}
+          <div className="w-64 text-sm">
+            <div className="px-8 py-12 bg-primary flex flex-col gap-0.5 rounded-lg service-info">
+              <div className="text-3xl text-white text-center mb-5 font-bold">Basic</div>
+              <div className="text-center mb-10 font-bold">
+                <button
+                  className="text-primary px-8 py-2 rounded-full bg-secondary"
+                  onClick={() => directWa("Halo, Saya telah mengakses https://loofytech.com - saya tertarik membuat Website dengan “Paket Basic” dapatkah anda menjelaskan rinciannya ?")}
+                >
+                  Order Sekarang
+                </button>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>3 Halaman</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>UI/UX Desain Simpel</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>User & Mobile Friendly</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>CTA WhatsApp</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Free Domain</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Maintenance Web</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Sertifikat SSL</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Request Fitur</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Optimasi SEO</span>
+              </div>
+              <div className="text-white flex items-center  gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Konten Manajemen</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Bonus Logo Usaha</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Harga Negotiable</span>
+              </div>
+            </div>
+          </div>
+          {/* Standart */}
+          <div className="w-64 text-sm">
+            <div className="px-8 py-12 bg-primary flex flex-col gap-0.5 rounded-lg service-info">
+              <div className="text-3xl text-white text-center mb-5 font-bold">Standard</div>
+              <div className="text-center mb-10 font-bold">
+                <button
+                  className="text-primary px-8 py-2 rounded-full bg-secondary"
+                  onClick={() => directWa("Halo, Saya telah mengakses https://loofytech.com - saya tertarik membuat Website dengan “Paket Standar” dapatkah anda menjelaskan rinciannya ?")}
+                >
+                  Order Sekarang
+                </button>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>5 Halaman</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>UI/UX Desain Simpel</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>User & Mobile Friendly</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>CTA WhatsApp</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Free Domain</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Maintenance Web</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Sertifikat SSL</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Request Fitur</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Optimasi SEO</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Konten Manajemen</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Bonus Logo Usaha</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} className="opacity-0" alt="icon check" />
+                <span className="line-through">Harga Negotiable</span>
+              </div>
+            </div>
+          </div>
+          {/* Premium */}
+          <div className="w-64 text-sm">
+            <div className="px-8 py-12 bg-primary flex flex-col gap-0.5 rounded-lg service-info">
+              <div className="text-3xl text-white text-center mb-5 font-bold">Premium</div>
+              <div className="text-center mb-10 font-bold">
+                <button
+                  className="text-primary px-8 py-2 rounded-full bg-secondary"
+                  onClick={() => directWa("Halo, Saya telah mengakses https://loofytech.com - saya tertarik membuat Website dengan “Paket Premium” dapatkah anda menjelaskan rinciannya ?")}
+                >
+                  Order Sekarang
+                </button>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Lebih dari 5 Halaman</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>UI/UX Desain Simpel</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>User & Mobile Friendly</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>CTA WhatsApp</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Free Domain</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Maintenance Web</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Sertifikat SSL</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Request Fitur</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Optimasi SEO</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Konten Manajemen</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Bonus Logo Usaha</span>
+              </div>
+              <div className="text-white flex items-center gap-2">
+                <Image src={"/check-circle.svg"} width={30} height={30} alt="icon check" />
+                <span>Harga Negotiable</span>
+              </div>
+            </div>
+          </div>
+        </div>}
       </div>
     </div>
-    <ProvidePart waMessage="Halo, saya tertarik dengan jasa anda dan saya ingin berdiskusi terkait pembuatan website untuk kebutuhan saya. Bersediakah anda meluangkan waktu untuk berkomunikasi dengan saya?" />
+    <ProvidePart label="Ceritakan Rencana Anda" waMessage="Halo, Saya telah mengakses https://loofytech.com/make-website - saya ingin menyampaikan beberapa rencana saya" />
   </>);
 }

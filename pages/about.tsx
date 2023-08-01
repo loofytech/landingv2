@@ -54,7 +54,7 @@ export default function About() {
         </div>
       </div>
     </div>
-    <ProvidePart waMessage="Halo, saya sedang mengunjungi website loofytech.com dan tertarik untuk mengetahui lebih lanjut tentang loofytech ini." />
+    <ProvidePart label="Ceritakan Rencana Anda" waMessage="Halo, Saya telah mengakses https://loofytech.com/about - saya ingin menyampaikan beberapa rencana saya" />
     <BoxClient />
   </>);
 }

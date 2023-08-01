@@ -61,7 +61,7 @@
   background: #F1F1F1;
   width: 100%;
   left: 0;
-  top: 100%;
+  top: 120%;
   right: 0;
   bottom: 0;
   -webkit-transition: all 0.3s ease;
@@ -98,6 +98,32 @@
 
 .head-dropdown-content a {
   padding: 8px 16px;
+}
+
+.slick-dots {
+  bottom: -40px !important;
+}
+
+.slick-price .slick-slide,
+.slick-why .slick-slide,
+.xxxy .slick-slide {
+  scale: 1 !important;
+  -webkit-transition: all 0.3s ease !important;
+  -moz-transition: all 0.3s ease !important;
+  -ms-transition: all 0.3s ease !important;
+  -o-transition: all 0.3s ease !important;
+  transition: all 0.3s ease !important;
+}
+
+.slick-price .slick-slide.slick-active,
+.slick-why .slick-slide.slick-active,
+.xxxy .slick-slide.slick-active {
+  scale: 1 !important;
+  -webkit-transition: all 0.3s ease !important;
+  -moz-transition: all 0.3s ease !important;
+  -ms-transition: all 0.3s ease !important;
+  -o-transition: all 0.3s ease !important;
+  transition: all 0.3s ease !important;
 }
 
 .slick-slide {
@@ -169,13 +195,15 @@
 }
 
 .box-client {
-  width: 130px;
+  /* width: 130px; */
   height: 130px;
   background: #FCFCFC;
-  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25) inset, 4px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), -4px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25) inset, 4px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), -4px 0px 4px 0px rgba(0, 0, 0, 0.25); */
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .select-make-app {
@@ -189,7 +217,7 @@
 
 .info-sldc {
   position: absolute;
-  top: 280px;
+  top: 43%;
   left: 50%;
   transform: translate(-50%);
   width: 230px;
@@ -262,7 +290,39 @@
   transition: all .3s ease-in-out;
 }
 
-@media only screen and (max-width: 1024px) {
+.why-u-choose-us {
+  background-image: url("/header@4x_1.png");
+  user-select: none;
+}
+
+.bbny {
+  position: relative;
+}
+
+.bbny:hover span {
+  left: -10px;
+}
+
+.bbny:hover .arrow-right {
+  right: 18px;
+  opacity: 1;
+}
+
+.bbny span {
+  position: relative;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.arrow-right {
+  position: absolute;
+  right: 38px;
+  top: 27%;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 767px) {
   .bg-wave {
     background-image: unset;
     top: 0;
@@ -271,7 +331,8 @@
     width: 160px;
     height: 160px;
     font-size: 12px;
-    top: 194px;
+    top: 40%;
+    left: 50%;
   }
   .dp-section-3 {
     justify-content: start;

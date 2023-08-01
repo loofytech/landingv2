@@ -6,90 +6,90 @@ import { useRouter } from "next/router";
 import ProvidePart from "@/components/ProvidePart";
 import BoxClient from "@/components/BoxClient";
 
-const sdlcs = [
-  {
-    key: "analisis",
-    desc: "Identifikasi dan pemahaman Kebutuhan Aplikasi yang akan dikembangkan.",
-    position: {
-      right: 50,
-      top: 70,
-      height: 70,
-      width: 160,
-      rotate: "40deg"
-    }
-  },
-  {
-    key: "perencanaan",
-    desc: "Penyusunan rencana proyek secara keseluruhan baik Alur Sistem & Desain sistem.",
-    position: {
-      width: 80,
-      height: 150,
-      right: 34,
-      top: 197
-    }
-  },
-  {
-    key: "proses",
-    desc: "Proses Pengembangan Aplikasi oleh tim Loofytech",
-    position: {
-      width: 160,
-      height: 70,
-      bottom: 50,
-      right: 113,
-      rotate: "-30deg"
-    }
-  },
-  {
-    key: "testing",
-    desc: "pengujian fungsional, pengujian kinerja, pengujian keamanan, dan lain-lain.",
-    position: {
-      width: 160,
-      height: 50,
-      bottom: 90,
-      left: 50,
-      rotate: "40deg"
-    }
-  },
-  {
-    key: "implementasi",
-    desc: "Instalasi dan Pelatihan terkait aplikasi kepada Instansi / Klien",
-    position: {
-      width: 80,
-      height: 160,
-      left: 33,
-      top: 140
-    }
-  },
-  {
-    key: "pemeliharaan",
-    desc: "Pemeliharaan rutin dan pembaruan sesuai kebutuhan dan perubahan",
-    position: {
-      width: 160,
-      height: 80,
-      top: 40,
-      left: 100,
-      rotate: "-30deg"
-    }
-  }
-];
-
-const apps = [
-  "Aplikasi Perkantoran",
-  "Aplikasi Tiket",
-  "Aplikasi Persuratan",
-  "Aplikasi Toko",
-  "Aplikasi Rumah Sakit",
-  "Aplikasi Pergudangan",
-  "Aplikasi Pemerintahan",
-  "Aplikasi keuangan",
-  "Aplikasi Koperasi"
-];
-
 export default function MakeApplication() {
   const [showInfo, setShowInfo] = useState<string>("Identifikasi dan pemahaman Kebutuhan Aplikasi yang akan dikembangkan.");
 
   const {width, height} = useWindowSize();
   const router = useRouter();
+
+  const sdlcs = [
+    {
+      key: "analisis",
+      desc: "Identifikasi dan pemahaman Kebutuhan Aplikasi yang akan dikembangkan.",
+      position: {
+        right: 50,
+        top: 70,
+        height: 70,
+        width: 160,
+        rotate: "40deg"
+      }
+    },
+    {
+      key: "perencanaan",
+      desc: "Penyusunan rencana proyek secara keseluruhan baik Alur Sistem & Desain sistem.",
+      position: {
+        width: 80,
+        height: 150,
+        right: 34,
+        top: 197
+      }
+    },
+    {
+      key: "proses",
+      desc: "Proses Pengembangan Aplikasi oleh tim Loofytech",
+      position: {
+        width: 160,
+        height: 70,
+        bottom: 50,
+        right: 113,
+        rotate: "-30deg"
+      }
+    },
+    {
+      key: "testing",
+      desc: "pengujian fungsional, pengujian kinerja, pengujian keamanan, dan lain-lain.",
+      position: {
+        width: 160,
+        height: 50,
+        bottom: 90,
+        left: 50,
+        rotate: "40deg"
+      }
+    },
+    {
+      key: "implementasi",
+      desc: "Instalasi dan Pelatihan terkait aplikasi kepada Instansi / Klien",
+      position: {
+        width: 80,
+        height: 160,
+        left: 33,
+        top: 140
+      }
+    },
+    {
+      key: "pemeliharaan",
+      desc: "Pemeliharaan rutin dan pembaruan sesuai kebutuhan dan perubahan",
+      position: {
+        width: 160,
+        height: 80,
+        top: 40,
+        left: 100,
+        rotate: "-30deg"
+      }
+    }
+  ];
+  
+  const apps = [
+    "Aplikasi Perkantoran",
+    "Aplikasi Tiket",
+    "Aplikasi Persuratan",
+    "Aplikasi Toko",
+    "Aplikasi Rumah Sakit",
+    "Aplikasi Pergudangan",
+    "Aplikasi Pemerintahan",
+    "Aplikasi keuangan",
+    "Aplikasi Koperasi"
+  ];
 
   const handleSDLC = (param: string) => {
     setShowInfo(param);
@@ -141,7 +141,7 @@ export default function MakeApplication() {
         <p className="italic text-center text-sm text-primary px-5">Panduan untuk mengelola proyek pengembangan Aplikasi secara efisien.</p>
         <div className="info-sldc bg-white">{showInfo}</div>
         <div className="my-5 animate-spin-cus relative">
-          <Image src={"/SDLC_2.png"} width={500} height={500} alt="sdlc" />
+          <Image src={"/SDLC_2.png"} width={540} height={540} alt="sdlc" />
           <div className="absolute w-full h-full opacity-50 top-0 rounded-full">
             {sdlcs.map((e: any, i: number) => {
               return <div
@@ -317,7 +317,7 @@ export default function MakeApplication() {
         </div>
       </div>
     </div>
-    <ProvidePart waMessage="Halo, saya tertarik dengan jasa anda dan saya ingin berdiskusi terkait pembuatan aplikasi untuk kebutuhan saya. Bersediakah anda meluangkan waktu untuk berkomunikasi dengan saya?" />
+    <ProvidePart label="Buat Aplikasi Anda !" waMessage="Halo, Saya telah mengakses www.loofytech.com/Aplikasi - saya tertarik membuat aplikasi dengan loofytech, bagaimanakah prosedurnya ?" />
     <BoxClient title="Klien Kami" subtitle="Kepuasaan pelanggan adalah yang utama bagi Loofytech" />
   </>);
 }

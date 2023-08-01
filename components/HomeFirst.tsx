@@ -9,12 +9,14 @@ import Link from "next/link";
 import { useWindowSize } from "@/plugins/windowDimensions";
 import BoxClient from "./BoxClient";
 import { directWa } from "@/plugins/globalFunction";
+import { useRouter } from "next/router";
 
 export default function HomeFirst() {
   const slider = useRef<any>(null);
   const [disabled, setDisabled] = useState<any>([false, false]);
   const dispatch = useDispatch();
   const {width, height} = useWindowSize();
+  const router = useRouter();
 
   const nextSection = () => {
     dispatch(setSecond(true));
@@ -24,13 +26,13 @@ export default function HomeFirst() {
 
   const settings = {
     centerMode: true,
-    centerPadding: "22%",
-    dots: false,
+    centerPadding: "0",
+    dots: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
-    autoplay: true,
+    autoplay: false,
     draggable: true,
     swipe: true,
     swipeToSlide: true,
@@ -56,7 +58,7 @@ export default function HomeFirst() {
         <br />
         Unlock All Doors of Your Plans
       </h1>
-      <div className="relative -top-20">
+      <div className="relative -top-10 xl:-top-5">
         <Image src={"/jumbo.png"} width={500} height={500} alt="" />
       </div>
       <div className="relative -top-20 pt-5 pb-28 px-2 md:px-28 xl:px-64">
@@ -99,53 +101,135 @@ export default function HomeFirst() {
     <div className="py-10 bg-secondary_a flex flex-col justify-center items-center px-2 md:py-20 md:px-28 xl:px-64">
       <h1 className="text-center font-bold text-black text-2xl md:text-5xl">Why You Choose LoofyTech ?</h1>
       <p className="text-lg mt-3 text-black md:text-2xl">Build with Love, to give the best for You</p>
-      <div className="w-full mt-14 px-5 md:px-32">
+      <div className="w-full slick-why mt-10 pb-5 px-5 lg:w-3/4 md:pb-0">
         <Slider {...settings} ref={slider}>
           <div className="">
             <div className="px-2">
-              <div className="bg-white flex flex-col items-center justify-center rounded-xl gap-4 p-10">
-                <span className="font-bold text-xl">Design</span>
-                <Image src={"/Design.png"} width={238} height={245} alt="design" />
+              <div className="bg-primary why-u-choose-us flex flex-col items-center justify-center rounded-xl gap-4 p-10">
+                <div className="flex w-full gap-5 flex-col justify-center items-center md:items-start md:flex-row md:justify-between">
+                  <div style={{color: "#FFF"}} className="w-full md:w-2/3">
+                    <h3 className="text-3xl font-bold text-center md:text-start whitespace-nowrap">Desain Terbaik</h3>
+                    <p className="mt-2 text-sm md:text-lg text-center md:text-start">Setiap detail dipikirkan dengan seksama untuk menciptakan antarmuka yang menakjubkan, memastikan penggunaan yang mudah, serta memikat dan memanjakan mata pengguna.</p>
+                  </div>
+                  <Image src={"/Design.png"} width={188} height={188} alt="design" />
+                </div>
               </div>
             </div>
           </div>
           <div className="">
             <div className="px-2">
-              <div className="bg-white flex flex-col items-center justify-center rounded-xl gap-4 p-10">
-                <span className="font-bold text-xl">Skalabilitas</span>
-                <Image src={"/Skalabilitas.png"} width={238} height={245} alt="skalabilitas" />
+              <div className="bg-primary why-u-choose-us flex flex-col items-center justify-center rounded-xl gap-4 p-10">
+                <div className="flex w-full gap-5 flex-col justify-center items-center md:items-start md:flex-row md:justify-between">
+                  <div style={{color: "#FFF"}} className="w-full md:w-2/3">
+                    <h3 className="text-3xl font-bold text-center md:text-start whitespace-nowrap">Skalabilitas</h3>
+                    <p className="mt-2 text-sm md:text-lg text-center md:text-start">Tim kami memiliki pengetahuan mendalam tentang teknologi terbaru dan praktik terbaik, sehingga dapat memberikan solusi yang tepat dan inovatif untuk Aplikasi anda.</p>
+                  </div>
+                  <Image src={"/Skalabilitas.png"} width={188} height={188} alt="skalabilitas" />
+                </div>
               </div>
             </div>
           </div>
           <div className="">
             <div className="px-2">
-              <div className="bg-white flex flex-col items-center justify-center rounded-xl gap-4 p-10">
-                <span className="font-bold text-xl">Security</span>
-                <Image src={"/Security.png"} width={238} height={245} alt="security" />
+              <div className="bg-primary why-u-choose-us flex flex-col items-center justify-center rounded-xl gap-4 p-10">
+                <div className="flex w-full gap-5 flex-col justify-center items-center md:items-start md:flex-row md:justify-between">
+                  <div style={{color: "#FFF"}} className="w-full md:w-2/3">
+                    <h3 className="text-3xl font-bold text-center md:text-start whitespace-nowrap">Keamanan</h3>
+                    <p className="mt-2 text-sm md:text-lg text-center md:text-start">Privasi dan keamanan data Anda dengan sempurna! Sistem keamanan terbaik untuk melindungi informasi berharga Anda dari ancaman cyber dan intrusi yang berbahaya.</p>
+                  </div>
+                  <Image src={"/Security.png"} width={188} height={188} alt="security" />
+                </div>
               </div>
             </div>
           </div>
           <div className="">
             <div className="px-2">
-              <div className="bg-white flex flex-col items-center justify-center rounded-xl gap-4 p-10">
-                <span className="font-bold text-xl">Speed</span>
-                <Image src={"/Speed.png"} width={238} height={245} alt="speed" />
+              <div className="bg-primary why-u-choose-us flex flex-col items-center justify-center rounded-xl gap-4 p-10">
+                <div className="flex w-full gap-5 flex-col justify-center items-center md:items-start md:flex-row md:justify-between">
+                  <div style={{color: "#FFF"}} className="w-full md:w-2/3">
+                    <h3 className="text-3xl font-bold text-center md:text-start whitespace-nowrap">Fleksibel</h3>
+                    <p className="mt-2 text-sm md:text-lg text-center md:text-start">Sesuaikan tampilan, fitur, dan fungsionalitas sesuai dengan preferensi Anda sendiri. rasakan keajaiban fleksibilitas aplikasi untuk mencapai potensi penuh bisnis Anda.</p>
+                  </div>
+                  <Image src={"/Speed.png"} width={188} height={188} alt="speed" />
+                </div>
               </div>
             </div>
           </div>
           <div className="">
             <div className="px-2">
-              <div className="bg-white flex flex-col items-center justify-center rounded-xl gap-4 p-10">
-                <span className="font-bold text-xl">Server</span>
-                <Image src={"/Server.png"} width={238} height={245} alt="server" />
+              <div className="bg-primary why-u-choose-us flex flex-col items-center justify-center rounded-xl gap-4 p-10">
+                <div className="flex w-full gap-5 flex-col justify-center items-center md:items-start md:flex-row md:justify-between">
+                  <div style={{color: "#FFF"}} className="w-full md:w-2/3">
+                    <h3 className="text-3xl font-bold text-center md:text-start whitespace-nowrap">Server</h3>
+                    <p className="mt-2 text-sm md:text-lg text-center md:text-start">Dengan kecepatan tinggi dan kapasitas yang luas, Server aplikasi kami adalah jawaban atas segala kebutuhan performa dan kehandalan dalam menjalankan aplikasi Anda.</p>
+                  </div>
+                  <Image src={"/Server.png"} width={188} height={188} alt="server" />
+                </div>
               </div>
             </div>
           </div>
           <div className="">
             <div className="px-2">
-              <div className="bg-white flex flex-col items-center justify-center rounded-xl gap-4 p-10">
-                <span className="font-bold text-xl">Harga</span>
-                <Image src={"/Harga.png"} width={238} height={245} alt="harga" />
+              <div className="bg-primary why-u-choose-us flex flex-col items-center justify-center rounded-xl gap-4 p-10">
+                <div className="flex w-full gap-5 flex-col justify-center items-center md:items-start md:flex-row md:justify-between">
+                  <div style={{color: "#FFF"}} className="w-full md:w-2/3">
+                    <h3 className="text-3xl font-bold text-center md:text-start whitespace-nowrap">Harga Negotiable</h3>
+                    <p className="mt-2 text-sm md:text-lg text-center md:text-start">Dapatkan Aplikasi yang anda butuhkan denga harga terbaik ! Jangan ragu untuk bernegosiasi, kami siap memberikan penawaran spesial khusus untuk Anda.</p>
+                  </div>
+                  <Image src={"/Harga.png"} width={188} height={188} alt="harga" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="">
+            <div className="px-2">
+              <div className="bg-primary why-u-choose-us flex flex-col items-center justify-center rounded-xl gap-4 p-10">
+                <div className="flex w-full gap-5 flex-col justify-center items-center md:items-start md:flex-row md:justify-between">
+                  <div style={{color: "#FFF"}} className="w-full md:w-2/3">
+                    <h3 className="text-3xl font-bold text-center md:text-start whitespace-nowrap">Optimasi SEO</h3>
+                    <p className="mt-2 text-sm md:text-lg text-center md:text-start">Naikkan peringkat website Anda dan jadi yang terbaik di mesin pencari! Layanan optimasi SEO kami akan membantu website Anda muncul di peringkat atas hasil pencarian.</p>
+                  </div>
+                  <Image src={"/jw_4.png"} width={188} height={188} alt="optimasi seo" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="">
+            <div className="px-2">
+              <div className="bg-primary why-u-choose-us flex flex-col items-center justify-center rounded-xl gap-4 p-10">
+                <div className="flex w-full gap-5 flex-col justify-center items-center md:items-start md:flex-row md:justify-between">
+                  <div style={{color: "#FFF"}} className="w-full md:w-2/3">
+                    <h3 className="text-3xl font-bold text-center md:text-start whitespace-nowrap">Full Kontrol</h3>
+                    <p className="mt-2 text-sm md:text-lg text-center md:text-start">Kelola website Anda dengan mudah dan efisien! CMS (Content Management System) yang kami tawarkan memberikan Anda kontrol penuh atas konten dan fitur di website Anda.</p>
+                  </div>
+                  <Image src={"/jw_5.png"} width={188} height={188} alt="full kontrol" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="">
+            <div className="px-2">
+              <div className="bg-primary why-u-choose-us flex flex-col items-center justify-center rounded-xl gap-4 p-10">
+                <div className="flex w-full gap-5 flex-col justify-center items-center md:items-start md:flex-row md:justify-between">
+                  <div style={{color: "#FFF"}} className="w-full md:w-2/3">
+                    <h3 className="text-3xl font-bold text-center md:text-start whitespace-nowrap">Mobile Friendly</h3>
+                    <p className="mt-2 text-sm md:text-lg text-center md:text-start">Lebih dekat dengan pengunjung Anda di mana saja! Website kami didesain sepenuhnya mobile-friendly, memastikan tampilan yang sempurna dan pengalaman yang optimal di berbagai perangkat.</p>
+                  </div>
+                  <Image src={"/jw_3.png"} width={188} height={188} alt="mobile friendly" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="">
+            <div className="px-2">
+              <div className="bg-primary why-u-choose-us flex flex-col items-center justify-center rounded-xl gap-4 p-10">
+                <div className="flex w-full gap-5 flex-col justify-center items-center md:items-start md:flex-row md:justify-between">
+                  <div style={{color: "#FFF"}} className="w-full md:w-2/3">
+                    <h3 className="text-3xl font-bold text-center md:text-start whitespace-nowrap">Pemeliharaan</h3>
+                    <p className="mt-2 text-sm md:text-lg text-center md:text-start">Dengan pemeliharaan rutin yang kami tawarkan, aplikasi Anda akan selalu diperbarui dengan teknologi terbaru dan dijamin berjalan lancar tanpa hambatan.</p>
+                  </div>
+                  <Image src={"/jw_6.png"} width={188} height={188} alt="mobile friendly" />
+                </div>
               </div>
             </div>
           </div>
@@ -153,7 +237,44 @@ export default function HomeFirst() {
       </div>
     </div>
     <BoxClient title="Klien Kami" subtitle="Kepuasaan pelanggan adalah yang utama bagi Loofytech" />
-    <div className="bg-transparent py-20 flex flex-col justify-center items-center px-2 md:px-20 xl:px-72">
+    <div className="flex justify-center">
+      <div className="w-full">
+        <h1 className="text-center text-3xl font-bold text-primary mt-3">Our Project</h1>
+        <div className="flex gap-3 mt-8 justify-center items-center flex-col md:flex-row">
+          <button
+            type="button"
+            className="bbny h-11 w-44 rounded-full border border-primary font-bold bg-primary text-white"
+            onClick={() => router.push("/make-website")}
+          >
+            <span>Website</span>
+            <div className="arrow-right">
+              <Image src={"/arrow_right.png"} width={20} height={20} alt="arrow right" />
+            </div>
+          </button>
+          <button
+            type="button"
+            className="bbny h-11 w-44 rounded-full border border-primary font-bold bg-primary text-white"
+            onClick={() => router.push("/make-application")}
+          >
+            <span>Aplikasi</span>
+            <div className="arrow-right">
+              <Image src={"/arrow_right.png"} width={20} height={20} alt="arrow right" />
+            </div>
+          </button>
+          <button
+            type="button"
+            className="bbny h-11 w-44 rounded-full border border-primary font-bold bg-primary text-white"
+            onClick={() => router.push("/design-product")}
+          >
+            <span>Desain Produk</span>
+            <div className="arrow-right">
+              <Image src={"/arrow_right.png"} width={20} height={20} alt="arrow right" />
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div className="bg-transparent pb-20 pt-10 flex flex-col justify-center items-center px-2 md:px-20 xl:px-72">
       <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-10 px-5 md:mx-0">
         <div className="project-info bg-light_gray_50 rounded-xl flex flex-col justify-center items-center">
           <Image src={"/importir_1.png"} width={294} height={293} className="w-full" alt="importir" />
@@ -221,10 +342,10 @@ export default function HomeFirst() {
         </div>
         <div className="project-info bg-light_gray_50 rounded-xl flex flex-col justify-center items-center">
           <Image src={"/e_learning.png"} width={294} height={293} className="w-full" alt="e-learning" />
-          <div className="text-primary font-bold relative -top-6 text-center">Aplikasi E-Learning</div>
+          <div className="text-primary font-bold relative -top-6 text-center">E-Learning SMK Darulmawa</div>
           <div className="project-info-part p-9">
             <p className="text-black text-center text-xs font-bold">APPLICATION</p>
-            <div className="flex items-center justify-center text-2xl tracking-wider font-bold absolute left-0 right-0 top-0 bottom-0 px-5 text-center">E-Learning</div>
+            <div className="flex items-center justify-center text-2xl tracking-wider font-bold absolute left-0 right-0 top-0 bottom-0 px-5 text-center">Aplikasi E-Learning SMK Darukmawa</div>
           </div>
         </div>
       </div>

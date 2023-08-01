@@ -3,9 +3,10 @@ import Image from "next/image";
 
 interface PProps {
   waMessage?: string;
+  label: string;
 }
 
-export default function ProvidePart({waMessage}: PProps) {
+export default function ProvidePart({waMessage, label}: PProps) {
   return (<>
     <div className="bg-primary relative flex flex-col justify-center items-center text-xl text-center wbgx" style={{minHeight: 556}}>
       <div className="absolute top-0 md:-top-20">
@@ -22,7 +23,7 @@ export default function ProvidePart({waMessage}: PProps) {
           onClick={() => directWa(waMessage)}
         >
           <Image src={"/formkit_whatsapp.svg"} width={24} height={24} alt="logo whatsapp" />
-          <span className="">Ceritakan Rencana Anda</span>
+          <span className="">{label}</span>
         </button>
       </div>}
     </div>

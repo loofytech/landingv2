@@ -1,6 +1,11 @@
+import { directWa } from "@/plugins/globalFunction";
 import Image from "next/image";
 
-export default function ProvidePart() {
+interface PProps {
+  waMessage?: string;
+}
+
+export default function ProvidePart({waMessage}: PProps) {
   return (<>
     <div className="bg-primary relative flex flex-col justify-center items-center text-xl text-center wbgx" style={{minHeight: 556}}>
       <div className="absolute top-0 md:-top-20">
@@ -11,12 +16,15 @@ export default function ProvidePart() {
         <br />
         Unlock All Doors of Your Plans
       </div>
-      <div className="absolute bottom-10">
-        <button className="bg-white text-primary flex items-center gap-2 rounded-lg px-8 py-2">
+      {waMessage && <div className="absolute bottom-10">
+        <button
+          className="bg-white text-primary flex items-center gap-2 rounded-lg px-8 py-2"
+          onClick={() => directWa(waMessage)}
+        >
           <Image src={"/formkit_whatsapp.svg"} width={24} height={24} alt="logo whatsapp" />
           <span className="">Ceritakan Rencana Anda</span>
         </button>
-      </div>
+      </div>}
     </div>
   </>);
 }

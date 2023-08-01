@@ -1,13 +1,19 @@
 import Image from "next/image";
 import { useWindowSize } from "@/plugins/windowDimensions";
 
-export default function BoxClient() {
+interface BProps {
+  title?: string;
+  subtitle?: string;
+}
+
+export default function BoxClient({title, subtitle}: BProps) {
   const {width} = useWindowSize();
 
   return (<>
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white py-20 md:py-0">
-      <h1 className="text-3xl md:text-5xl font-bold text-primary">OUR CLIENT</h1>
-      <div className="grid grid-cols-3 md:grid-cols-5 gap-5 mt-10 md:mt-16">
+    <div className="flex flex-col items-center justify-center bg-transparent py-14">
+      {title && <h1 className="text-3xl md:text-4xl font-bold text-primary">{title}</h1>}
+      {subtitle && <p className="text-center italic">{subtitle}</p>}
+      <div className={`grid grid-cols-3 md:grid-cols-5 gap-5 ${title ? "mt-10" : "mt-4"}`}>
         <div className="box-client">
           <Image src={"/Dinamika_Network_1.png"} width={width <= 640 ? 84 : 114} height={width <= 640 ? 84 : 114} alt="" />
         </div>

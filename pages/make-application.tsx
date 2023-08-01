@@ -3,6 +3,8 @@ import { useState } from "react";
 import { useWindowSize } from "@/plugins/windowDimensions";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
+import ProvidePart from "@/components/ProvidePart";
+import BoxClient from "@/components/BoxClient";
 
 const sdlcs = [
   {
@@ -126,7 +128,7 @@ export default function MakeApplication() {
     </div>
     <div className="bg-primary pt-10 flex flex-col items-center justify-center relative pb-10 md:pb-64">
       <h1 className="text-3xl text-center text-white font-bold">Aplikasi apa yang anda butuhkan ?</h1>
-      <Image src={"/ggggg.png"} width={600} height={384} alt="" />
+      <Image src={"/ggggg.png"} width={600} height={384} alt="gggg" />
       <div className="gap-3 mt-10 relative -top-5 px-5 w-full grid grid-cols-2 md:grid-cols-3 md:w-auto md:px-0">
         {apps.map((m: any, i: number) => {
           return <div key={i} className="bg-white flex items-center justify-center py-2.5 rounded-lg select-make-app text-sm w-full md:text-base md:w-52">{m}</div>;
@@ -135,11 +137,11 @@ export default function MakeApplication() {
     </div>
     <div className="bg-wave flex flex-col items-center justify-center relative">
       <div className="relative top-16 overflow-hidden">
-        <h1 className="text-center text-xl font-bold text-primary mt-20">Software Development Life Cycle</h1>
+        <h1 className="text-center text-xl font-bold text-primary mt-0 md:mt-20">Software Development Life Cycle</h1>
         <p className="italic text-center text-sm text-primary px-5">Panduan untuk mengelola proyek pengembangan Aplikasi secara efisien.</p>
         <div className="info-sldc bg-white">{showInfo}</div>
         <div className="my-5 animate-spin-cus relative">
-          <Image src={"/SDLC_2.png"} width={500} height={500} alt="" />
+          <Image src={"/SDLC_2.png"} width={500} height={500} alt="sdlc" />
           <div className="absolute w-full h-full opacity-50 top-0 rounded-full">
             {sdlcs.map((e: any, i: number) => {
               return <div
@@ -160,152 +162,152 @@ export default function MakeApplication() {
             style={{width: 90, height: 90, background: "#FFF", boxShadow: "1px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"}}
             className="shadow flex items-center justify-center"
           >
-            <Image src={"/Asset_76.png"} width={70} height={70} alt="" />
+            <Image src={"/Asset_76.png"} width={70} height={70} alt="stack 1" />
           </div>
           <div
             style={{width: 90, height: 90, background: "#FFF", boxShadow: "1px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"}}
             className="shadow flex items-center justify-center"
           >
-            <Image src={"/Asset_94.png"} width={70} height={70} alt="" />
+            <Image src={"/Asset_94.png"} width={70} height={70} alt="stack 2" />
           </div>
           <div
             style={{width: 90, height: 90, background: "#FFF", boxShadow: "1px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"}}
             className="shadow flex items-center justify-center"
           >
-            <Image src={"/Asset_87.png"} width={70} height={70} alt="" />
+            <Image src={"/Asset_87.png"} width={70} height={70} alt="stack 3" />
           </div>
           <div
             style={{width: 90, height: 90, background: "#FFF", boxShadow: "1px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"}}
             className="shadow flex items-center justify-center"
           >
-            <Image src={"/Asset_86.png"} width={70} height={70} alt="" />
+            <Image src={"/Asset_86.png"} width={70} height={70} alt="stack 4" />
           </div>
           <div
             style={{width: 90, height: 90, background: "#FFF", boxShadow: "1px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"}}
             className="shadow flex items-center justify-center"
           >
-            <Image src={"/Asset_82.png"} width={70} height={70} alt="" />
+            <Image src={"/Asset_82.png"} width={70} height={70} alt="stack 5" />
           </div>
           <div
             style={{width: 90, height: 90, background: "#FFF", boxShadow: "1px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"}}
             className="shadow flex items-center justify-center"
           >
-            <Image src={"/Asset_79.png"} width={70} height={70} alt="" />
+            <Image src={"/Asset_79.png"} width={70} height={70} alt="stack 6" />
           </div>
           <div
             style={{width: 90, height: 90, background: "#FFF", boxShadow: "1px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"}}
             className="shadow flex items-center justify-center"
           >
-            <Image src={"/Asset_98.png"} width={70} height={70} alt="" />
+            <Image src={"/Asset_98.png"} width={70} height={70} alt="stack 7" />
           </div>
           <div
             style={{width: 90, height: 90, background: "#FFF", boxShadow: "1px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"}}
             className="shadow flex items-center justify-center"
           >
-            <Image src={"/Asset_93.png"} width={70} height={70} alt="" />
+            <Image src={"/Asset_93.png"} width={70} height={70} alt="stack 8" />
           </div>
           <div
             style={{width: 90, height: 90, background: "#FFF", boxShadow: "1px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"}}
             className="shadow flex items-center justify-center"
           >
-            <Image src={"/Asset_95.png"} width={70} height={70} alt="" />
+            <Image src={"/Asset_95.png"} width={70} height={70} alt="stack 9" />
           </div>
           <div
             style={{width: 90, height: 90, background: "#FFF", boxShadow: "1px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"}}
             className="shadow flex items-center justify-center"
           >
-            <Image src={"/Asset_78.png"} width={70} height={70} alt="" />
+            <Image src={"/Asset_78.png"} width={70} height={70} alt="stack 10" />
           </div>
           <div
             style={{width: 90, height: 90, background: "#FFF", boxShadow: "1px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"}}
             className="shadow flex items-center justify-center"
           >
-            <Image src={"/Asset_77.png"} width={70} height={70} alt="" />
+            <Image src={"/Asset_77.png"} width={70} height={70} alt="stack 11" />
           </div>
           <div
             style={{width: 90, height: 90, background: "#FFF", boxShadow: "1px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"}}
             className="shadow flex items-center justify-center"
           >
-            <Image src={"/Asset_97.png"} width={70} height={70} alt="" />
+            <Image src={"/Asset_97.png"} width={70} height={70} alt="stack 12" />
           </div>
           <div
             style={{width: 90, height: 90, background: "#FFF", boxShadow: "1px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"}}
             className="shadow flex items-center justify-center"
           >
-            <Image src={"/boot@300x_1.png"} width={70} height={70} alt="" />
+            <Image src={"/boot@300x_1.png"} width={70} height={70} alt="stack 13" />
           </div>
           <div
             style={{width: 90, height: 90, background: "#FFF", boxShadow: "1px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"}}
             className="shadow flex items-center justify-center"
           >
-            <Image src={"/Asset_92.png"} width={70} height={70} alt="" />
+            <Image src={"/Asset_92.png"} width={70} height={70} alt="stack 14" />
           </div>
           <div
             style={{width: 90, height: 90, background: "#FFF", boxShadow: "1px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"}}
             className="shadow flex items-center justify-center"
           >
-            <Image src={"/Asset_90.png"} width={70} height={70} alt="" />
+            <Image src={"/Asset_90.png"} width={70} height={70} alt="stack 15" />
           </div>
           <div
             style={{width: 90, height: 90, background: "#FFF", boxShadow: "1px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"}}
             className="shadow flex items-center justify-center"
           >
-            <Image src={"/nuxt_1.png"} width={70} height={70} alt="" />
+            <Image src={"/nuxt_1.png"} width={70} height={70} alt="stack 16" />
           </div>
           <div
             style={{width: 90, height: 90, background: "#FFF", boxShadow: "1px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"}}
             className="shadow flex items-center justify-center"
           >
-            <Image src={"/Asset_91.png"} width={70} height={70} alt="" />
+            <Image src={"/Asset_91.png"} width={70} height={70} alt="stack 17" />
           </div>
           <div
             style={{width: 90, height: 90, background: "#FFF", boxShadow: "1px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"}}
             className="shadow flex items-center justify-center"
           >
-            <Image src={"/Asset_96.png"} width={70} height={70} alt="" />
+            <Image src={"/Asset_96.png"} width={70} height={70} alt="stack 18" />
           </div>
         </div>
-        <div className="relative top-20">
+        <div className="relative top-20 pb-36 md:pb-0">
           <h1 className="text-xl text-center font-bold text-primary">Kami adalah tempat yang Tepat</h1>
           <p className="italic text-sm text-center text-primary">Kami akan memberikan Solusi dan Inovasi untuk Bisnis anda</p>
           <div className="flex flex-wrap justify-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
             <div className="bg-primary rounded flex items-center justify-center p-5 siuu" style={{width: width < 768 ? 160 : 180, height: width < 768 ? 160 : 180}}>
-              <Image src={"/Harga.png"} width={200} height={200} alt="" />
+              <Image src={"/Harga.png"} width={200} height={200} alt="harga" />
               <div>
                 <h4 className="text-center font-bold mb-2 text-sm">Harga Negotiable</h4>
                 <p className="text-center text-xs">Dapatkan Aplikasi yang anda butuhkan denga harga terbaik! Jangan ragu untuk bernegosiasi, kami siap memberikan penawaran spesial khusus untuk Anda</p>
               </div>
             </div>
             <div className="bg-primary rounded flex items-center justify-center p-5 siuu" style={{width: width < 768 ? 160 : 180, height: width < 768 ? 160 : 180}}>
-              <Image src={"/Skalabilitas.png"} width={200} height={200} alt="" />
+              <Image src={"/Skalabilitas.png"} width={200} height={200} alt="skalabilitas" />
               <div>
                 <h4 className="text-center font-bold mb-2 text-sm">Skalabilitas</h4>
                 <p className="text-center text-xs">Tim kami memiliki pengetahuan mendalam tentang teknologi terbaru dan praktik terbaik, sehingga dapat memberikan solusi yang tepat dan inovatif untuk Aplikasi anda.</p>
               </div>
             </div>
             <div className="bg-primary rounded flex items-center justify-center p-5 siuu" style={{width: width < 768 ? 160 : 180, height: width < 768 ? 160 : 180}}>
-              <Image src={"/Speed.png"} width={200} height={200} alt="" />
+              <Image src={"/Speed.png"} width={200} height={200} alt="speed" />
               <div>
                 <h4 className="text-center font-bold mb-2 text-sm">Fleksibel</h4>
                 <p className="text-center text-xs">Sesuaikan tampilan, fitur, dan fungsionalitas sesuai dengan preferensi Anda sendiri. rasakan keajaiban fleksibilitas aplikasi untuk mencapai potensi penuh bisnis Anda.</p>
               </div>
             </div>
             <div className="bg-primary rounded flex items-center justify-center p-5 siuu" style={{width: width < 768 ? 160 : 180, height: width < 768 ? 160 : 180}}>
-              <Image src={"/Server.png"} width={200} height={200} alt="" />
+              <Image src={"/Server.png"} width={200} height={200} alt="server" />
               <div>
                 <h4 className="text-center font-bold mb-2 text-sm">Server</h4>
                 <p className="text-center text-xs">Dengan kecepatan tinggi dan kapasitas yang luas, Server aplikasi kami adalah jawaban atas segala kebutuhan performa dan kehandalan dalam menjalankan aplikasi Anda.</p>
               </div>
             </div>
             <div className="bg-primary rounded flex items-center justify-center p-5 siuu" style={{width: width < 768 ? 160 : 180, height: width < 768 ? 160 : 180}}>
-              <Image src={"/Security.png"} width={200} height={200} alt="" />
+              <Image src={"/Security.png"} width={200} height={200} alt="security" />
               <div>
                 <h4 className="text-center font-bold mb-2 text-sm">Keamanan</h4>
                 <p className="text-center text-xs">Privasi dan keamanan data Anda dengan sempurna! Sistem keamanan terbaik untuk melindungi informasi berharga Anda dari ancaman cyber dan intrusi yang berbahaya.</p>
               </div>
             </div>
             <div className="bg-primary rounded flex items-center justify-center p-5 siuu" style={{width: width < 768 ? 160 : 180, height: width < 768 ? 160 : 180}}>
-              <Image src={"/setting_1.png"} width={200} height={200} alt="" />
+              <Image src={"/setting_1.png"} width={200} height={200} alt="setting" />
               <div>
                 <h4 className="text-center font-bold mb-2 text-sm">Pemeliharaan</h4>
                 <p className="text-center text-xs">Dengan pemeliharaan rutin yang kami tawarkan, aplikasi Anda akan selalu diperbarui dengan teknologi terbaru dan dijamin berjalan lancar tanpa hambatan.</p>
@@ -315,5 +317,7 @@ export default function MakeApplication() {
         </div>
       </div>
     </div>
+    <ProvidePart waMessage="Halo, saya tertarik dengan jasa anda dan saya ingin berdiskusi terkait pembuatan aplikasi untuk kebutuhan saya. Bersediakah anda meluangkan waktu untuk berkomunikasi dengan saya?" />
+    <BoxClient title="Klien Kami" subtitle="Kepuasaan pelanggan adalah yang utama bagi Loofytech" />
   </>);
 }

@@ -33,10 +33,10 @@ export default function Header() {
         <Link href={"/"}>Beranda</Link>
         <div className="head-dropdown">
           <span>Layanan Kami</span>
-          <div className="head-dropdown-content">
-            <Link className="whitespace-nowrap hover:bg-gray_a" href={"/make-website"}>Pembuatan Website</Link>
-            <Link className="whitespace-nowrap hover:bg-gray_a" href={"/make-application"}>Pembuatan Program / Aplikasi</Link>
-            <Link className="whitespace-nowrap hover:bg-gray_a" href={"/design-product"}>Desain Produk</Link>
+          <div className="head-dropdown-content bg-transparent pt-3">
+            <Link className="bg-white whitespace-nowrap hover:bg-gray hover:text-white" href={"/make-website"}>Pembuatan Website</Link>
+            <Link className="bg-white whitespace-nowrap hover:bg-gray hover:text-white" href={"/make-application"}>Pembuatan Program / Aplikasi</Link>
+            <Link className="bg-white whitespace-nowrap hover:bg-gray hover:text-white" href={"/design-product"}>Desain Produk</Link>
           </div>
         </div>
         <Link href={"/information"}>Informasi</Link>

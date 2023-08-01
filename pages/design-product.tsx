@@ -6,6 +6,7 @@ import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { directWa } from "@/plugins/globalFunction";
 
 export default function DesignProduct() {
   const slider = useRef<any>(null);
@@ -147,7 +148,7 @@ export default function DesignProduct() {
       </div>
     </div>
     <div className="flex flex-col justify-center items-center px-2 mb-10 md:mb-28 md:px-14 xl:px-52">
-      <div className="w-full flex items-start gap-10 mt-0 flex-col md:mt-24 md:flex-row">
+      <div className="w-full flex items-start gap-10 mt-0 flex-col flex-col-reverse md:mt-24 md:flex-row">
         <div style={{width: width < 768 ? "100%" : 500}}>
           <Slider {...settings} ref={slider2}>
             <div className="">
@@ -181,7 +182,7 @@ export default function DesignProduct() {
           </Slider>
         </div>
         <div className="w-full md:w-1/2 select-none">
-          <h3 className="text-primary text-2xl font-bold mb-3">Desain Profil Perusahaan / Usaha Anda</h3>
+          <h3 className="text-primary text-2xl font-bold text-center mb-3">Desain Profil Perusahaan / Usaha Anda</h3>
           <p className="text-sm italic">Kami senang dapat memberikan penawaran jasa desain logo untuk membantu memperkuat identitas merek Anda. Dengan kombinasi kreativitas, profesionalisme, dan keahlian dalam desain grafis, kami siap menciptakan logo yang unik dan mengesankan untuk merek Anda.</p>
         </div>
       </div>
@@ -226,6 +227,7 @@ export default function DesignProduct() {
           className="bg-primary text-white py-3 px-8 font-semibold rounded-xl"
           type="button"
           style={{filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"}}
+          onClick={() => directWa("Halo, saya ingin berdiskusi dengan anda terkait company profile yang ingin saya bangun. Bisakah anda meluangkan waktu untuk berkomunikasi dengan saya?")}
         >
           Buat Company Profile Anda
         </button>

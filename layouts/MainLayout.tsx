@@ -1,11 +1,10 @@
 import Image from "next/image";
-import { Roboto } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
 import { motion } from "framer-motion";
 import { setBgBot, setBgTop, setFlash } from "@/store/reducers/transitionReducer";
 import { Suspense, useEffect } from "react";
-import Loading from "@/pages/loading";
 import NextNProgress from "nextjs-progressbar";
 import { useRouter } from "next/router";
 import { useEffectOnce } from "usehooks-ts";
@@ -13,7 +12,7 @@ import Select from "react-select";
 import Logo from "@/components/Logo";
 import Header from "@/components/Header";
 
-const font = Roboto({
+const font = Quicksand({
   subsets: ["latin"],
   weight: "400"
 });

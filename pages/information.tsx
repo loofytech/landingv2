@@ -51,7 +51,7 @@ export default function Information() {
           </div>
         </div>
         <div className="flex justify-around relative mx-auto w-full pb-10 flex-col px-5 md:px-0 md:w-2/3 md:flex-row">
-          <Image src={"/Artboard_1@4x_1.png"} width={470} height={404} alt="" />
+          <Image src={"/Artboard_1@4x_1.png"} width={470} height={404} alt="artboard 1" />
           <form className="w-full md:w-96 flex flex-col mt-10">
             <span className="mb-0.5">Nama</span>
             <input type="text" className="py-2 px-3 rounded-md outline-none text-sm w-full" />
@@ -93,7 +93,7 @@ export default function Information() {
           </div>
         </div>
         <div className="flex justify-around relative mx-auto w-full pb-10 flex-col px-5 md:px-0 md:w-2/3 md:flex-row">
-          <Image src={"/Artboard_1@4x_1.png"} width={470} height={404} alt="" />
+          <Image src={"/Artboard_1@4x_1.png"} width={470} height={404} alt="artboard 2" />
           <form className="w-full md:w-96 flex flex-col mt-10">
             <span className="mb-0.5">Nama</span>
             <input type="text" className="py-2 px-3 rounded-md outline-none text-sm w-full" />
@@ -114,6 +114,6 @@ export default function Information() {
       </div>
     </div>
     <div style={{height: 70, background: "#FFF"}}></div>
-    <ProvidePart />
+    <ProvidePart waMessage="Halo, saya tertarik dengan informasi yang anda lampirkan di loofytech, Bersediakah anda meluangkan waktu untuk berkomunikasi dengan saya?" />
   </>);
 }

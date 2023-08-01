@@ -8,6 +8,7 @@ import { useRef, useState } from "react";
 import Link from "next/link";
 import { useWindowSize } from "@/plugins/windowDimensions";
 import BoxClient from "./BoxClient";
+import { directWa } from "@/plugins/globalFunction";
 
 export default function HomeFirst() {
   const slider = useRef<any>(null);
@@ -86,6 +87,7 @@ export default function HomeFirst() {
             <button
               type="button"
               className="flex justify-center items-center gap-2 bg-primary text-white py-1.5 px-5 rounded-lg drop-shadow-m"
+              onClick={() => directWa("Halo, saya sedang berkunjung ke website loofytech.com, ada beberapa pertanyaan yang ingin saya ajukan kepada anda terkait aplikasi yang ingin saya bangun. Bersediakah anda meluangkan waktu untuk berkomunikasi dengan saya?")}
             >
               <Image src={"/whatsapp.svg"} width={24} height={24} alt="logo whatsapp" />
               <span className="">Beritahu Kami Rencana Anda</span>
@@ -94,16 +96,16 @@ export default function HomeFirst() {
         </div>
       </div>
     </div>
-    <div className="py-10 bg-white_a flex flex-col justify-center items-center px-2 md:py-20 md:px-28 xl:px-64">
+    <div className="py-10 bg-secondary_a flex flex-col justify-center items-center px-2 md:py-20 md:px-28 xl:px-64">
       <h1 className="text-center font-bold text-black text-2xl md:text-5xl">Why You Choose LoofyTech ?</h1>
       <p className="text-lg mt-3 text-black md:text-2xl">Build with Love, to give the best for You</p>
-      <div className="w-full mt-14 px-5 md:px-20">
+      <div className="w-full mt-14 px-5 md:px-32">
         <Slider {...settings} ref={slider}>
           <div className="">
             <div className="px-2">
               <div className="bg-white flex flex-col items-center justify-center rounded-xl gap-4 p-10">
                 <span className="font-bold text-xl">Design</span>
-                <Image src={"/Design.png"} width={238} height={245} alt="" />
+                <Image src={"/Design.png"} width={238} height={245} alt="design" />
               </div>
             </div>
           </div>
@@ -111,7 +113,7 @@ export default function HomeFirst() {
             <div className="px-2">
               <div className="bg-white flex flex-col items-center justify-center rounded-xl gap-4 p-10">
                 <span className="font-bold text-xl">Skalabilitas</span>
-                <Image src={"/Skalabilitas.png"} width={238} height={245} alt="" />
+                <Image src={"/Skalabilitas.png"} width={238} height={245} alt="skalabilitas" />
               </div>
             </div>
           </div>
@@ -119,7 +121,7 @@ export default function HomeFirst() {
             <div className="px-2">
               <div className="bg-white flex flex-col items-center justify-center rounded-xl gap-4 p-10">
                 <span className="font-bold text-xl">Security</span>
-                <Image src={"/Security.png"} width={238} height={245} alt="" />
+                <Image src={"/Security.png"} width={238} height={245} alt="security" />
               </div>
             </div>
           </div>
@@ -127,7 +129,7 @@ export default function HomeFirst() {
             <div className="px-2">
               <div className="bg-white flex flex-col items-center justify-center rounded-xl gap-4 p-10">
                 <span className="font-bold text-xl">Speed</span>
-                <Image src={"/Speed.png"} width={238} height={245} alt="" />
+                <Image src={"/Speed.png"} width={238} height={245} alt="speed" />
               </div>
             </div>
           </div>
@@ -135,7 +137,7 @@ export default function HomeFirst() {
             <div className="px-2">
               <div className="bg-white flex flex-col items-center justify-center rounded-xl gap-4 p-10">
                 <span className="font-bold text-xl">Server</span>
-                <Image src={"/Server.png"} width={238} height={245} alt="" />
+                <Image src={"/Server.png"} width={238} height={245} alt="server" />
               </div>
             </div>
           </div>
@@ -143,18 +145,18 @@ export default function HomeFirst() {
             <div className="px-2">
               <div className="bg-white flex flex-col items-center justify-center rounded-xl gap-4 p-10">
                 <span className="font-bold text-xl">Harga</span>
-                <Image src={"/Harga.png"} width={238} height={245} alt="" />
+                <Image src={"/Harga.png"} width={238} height={245} alt="harga" />
               </div>
             </div>
           </div>
         </Slider>
       </div>
     </div>
-    <BoxClient />
+    <BoxClient title="Klien Kami" subtitle="Kepuasaan pelanggan adalah yang utama bagi Loofytech" />
     <div className="bg-transparent py-20 flex flex-col justify-center items-center px-2 md:px-20 xl:px-72">
       <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-10 px-5 md:mx-0">
         <div className="project-info bg-light_gray_50 rounded-xl flex flex-col justify-center items-center">
-          <Image src={"/importir_1.png"} width={294} height={293} className="w-full" alt="" />
+          <Image src={"/importir_1.png"} width={294} height={293} className="w-full" alt="importir" />
           <div className="text-primary font-bold relative -top-6 text-center">Website Importir</div>
           <div className="project-info-part p-9">
             <p className="text-black text-center text-xs font-bold">WEBSITE</p>
@@ -162,7 +164,7 @@ export default function HomeFirst() {
           </div>
         </div>
         <div className="project-info bg-light_gray_50 rounded-xl flex flex-col justify-center items-center">
-          <Image src={"/san_pradana_1.png"} width={294} height={293} className="w-full" alt="" />
+          <Image src={"/san_pradana_1.png"} width={294} height={293} className="w-full" alt="san pradana teknik" />
           <div className="text-primary font-bold relative -top-6 text-center">Website PT. San Pradana Teknik</div>
           <div className="project-info-part p-9">
             <p className="text-black text-center text-xs font-bold">WEBSITE</p>
@@ -170,7 +172,7 @@ export default function HomeFirst() {
           </div>
         </div>
         <div className="project-info bg-light_gray_50 rounded-xl flex flex-col justify-center items-center">
-          <Image src={"/gpm_11.png"} width={294} height={293} className="w-full" alt="" />
+          <Image src={"/gpm_11.png"} width={294} height={293} className="w-full" alt="gading persada mandiri" />
           <div className="text-primary font-bold relative -top-6 text-center">Website PT. Gading Persada Mandiri</div>
           <div className="project-info-part p-9">
             <p className="text-black text-center text-xs font-bold">WEBSITE</p>
@@ -178,7 +180,7 @@ export default function HomeFirst() {
           </div>
         </div>
         <div className="project-info bg-light_gray_50 rounded-xl flex flex-col justify-center items-center">
-          <Image src={"/yudatama_1.png"} width={294} height={293} className="w-full" alt="" />
+          <Image src={"/yudatama_1.png"} width={294} height={293} className="w-full" alt="stars yudathama" />
           <div className="text-primary font-bold relative -top-6 text-center">Website PT. Stars Yudathama</div>
           <div className="project-info-part p-9">
             <p className="text-black text-center text-xs font-bold">WEBSITE</p>
@@ -186,7 +188,7 @@ export default function HomeFirst() {
           </div>
         </div>
         <div className="project-info bg-light_gray_50 rounded-xl flex flex-col justify-center items-center">
-          <Image src={"/baselog_1.png"} width={294} height={293} className="w-full" alt="" />
+          <Image src={"/baselog_1.png"} width={294} height={293} className="w-full" alt="baselog" />
           <div className="text-primary font-bold relative -top-6 text-center">Aplikasi BaseLog</div>
           <div className="project-info-part p-9">
             <p className="text-black text-center text-xs font-bold">APPLICATION</p>
@@ -194,7 +196,7 @@ export default function HomeFirst() {
           </div>
         </div>
         <div className="project-info bg-light_gray_50 rounded-xl flex flex-col justify-center items-center">
-          <Image src={"/catur_11.png"} width={294} height={293} className="w-full" alt="" />
+          <Image src={"/catur_11.png"} width={294} height={293} className="w-full" alt="catur pariwara utama" />
           <div className="text-primary font-bold relative -top-6 text-center">Website PT. Catur Pariwara Utama</div>
           <div className="project-info-part p-9">
             <p className="text-black text-center text-xs font-bold">WEBSITE</p>
@@ -202,7 +204,7 @@ export default function HomeFirst() {
           </div>
         </div>
         <div className="project-info bg-light_gray_50 rounded-xl flex flex-col justify-center items-center">
-          <Image src={"/admin_11.png"} width={294} height={293} className="w-full" alt="" />
+          <Image src={"/admin_11.png"} width={294} height={293} className="w-full" alt="metawater" />
           <div className="text-primary font-bold relative -top-6 text-center">POS metaWater</div>
           <div className="project-info-part p-9">
             <p className="text-black text-center text-xs font-bold">APPLICATION</p>
@@ -210,7 +212,7 @@ export default function HomeFirst() {
           </div>
         </div>
         <div className="project-info bg-light_gray_50 rounded-xl flex flex-col justify-center items-center">
-          <Image src={"/dinamika_1.png"} width={294} height={293} className="w-full" alt="" />
+          <Image src={"/dinamika_1.png"} width={294} height={293} className="w-full" alt="dinamika network consultant" />
           <div className="text-primary font-bold relative -top-6 text-center">Website PT. Dinamika Network Consultant</div>
           <div className="project-info-part p-9">
             <p className="text-black text-center text-xs font-bold">WEBSITE</p>
@@ -218,7 +220,7 @@ export default function HomeFirst() {
           </div>
         </div>
         <div className="project-info bg-light_gray_50 rounded-xl flex flex-col justify-center items-center">
-          <Image src={"/e_learning.png"} width={294} height={293} className="w-full" alt="" />
+          <Image src={"/e_learning.png"} width={294} height={293} className="w-full" alt="e-learning" />
           <div className="text-primary font-bold relative -top-6 text-center">Aplikasi E-Learning</div>
           <div className="project-info-part p-9">
             <p className="text-black text-center text-xs font-bold">APPLICATION</p>

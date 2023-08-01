@@ -1,0 +1,14 @@
+{
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/": "pages/index.html",
+  "/_app": "pages/_app.js",
+  "/api/hello": "pages/api/hello.js",
+  "/about": "pages/about.html",
+  "/contact": "pages/contact.html",
+  "/design-product": "pages/design-product.html",
+  "/make-website": "pages/make-website.html",
+  "/make-application": "pages/make-application.html",
+  "/information": "pages/information.html",
+  "/404": "pages/404.html"
+}

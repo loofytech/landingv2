@@ -12,8 +12,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <title>Loofytech</title>
       <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     </Head>
-    <Script strategy="lazyOnload" src="https://www.googletagmanager.com/gtag/js?id=G-0K0K6FHSZV" />
-    <Script strategy="lazyOnload">
+    <Script strategy="lazyOnload" src="https://www.googletagmanager.com/gtag/js?id=G-0K0K6FHSZV" id="g-manager" />
+    <Script strategy="lazyOnload" id="g-manager-datalayer">
       {`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}

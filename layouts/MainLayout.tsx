@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
 import { motion } from "framer-motion";
 import { setBgBot, setBgTop, setFlash } from "@/store/reducers/transitionReducer";
-import { Suspense, useEffect } from "react";
+import { Suspense, useEffect, useState } from "react";
 import NextNProgress from "nextjs-progressbar";
 import { useRouter } from "next/router";
 import { useEffectOnce } from "usehooks-ts";
@@ -14,6 +14,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FlyingMessage from "@/components/FlyingMessage";
 import { useWindowSize } from "@/plugins/windowDimensions";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const font = Quicksand({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function MainLayout({children}: LProps) {
   const dispatch = useDispatch();
   const router = useRouter();
   const {width} = useWindowSize();
+  const [showToTop, setShowToTop] = useState<boolean>(false);
 
   const handleRouteStartChange = () => {
     dispatch(setFlash(true));
@@ -43,9 +45,20 @@ export default function MainLayout({children}: LProps) {
     }, 1000);
   }
 
+  const scrll = () => {
+    if (window.scrollY <= 500) {
+      setShowToTop(false);
+    } else {
+      setShowToTop(true);
+    }
+  }
+
   useEffect(() => {
     router.events.on('routeChangeStart', handleRouteStartChange);
     router.events.on('routeChangeComplete', handleRouteCompleteChange);
+
+    window.addEventListener("scroll", scrll);
+    return () => window.removeEventListener('scroll', scrll);
   }, []);
 
   useEffectOnce(() => {
@@ -84,6 +97,7 @@ export default function MainLayout({children}: LProps) {
     <Header />
     {children}
     <Footer />
+    {showToTop && <ScrollToTop />}
     <FlyingMessage />
     <NextNProgress color="#0F3D3E" />
   </div>);

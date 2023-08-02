@@ -2,13 +2,13 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/about": "pages/about.html",
-  "/contact": "pages/contact.html",
-  "/design-product": "pages/design-product.html",
-  "/": "pages/index.html",
   "/api/hello": "pages/api/hello.js",
+  "/contact": "pages/contact.html",
+  "/": "pages/index.html",
+  "/design-product": "pages/design-product.html",
   "/_error": "pages/_error.js",
-  "/make-application": "pages/make-application.html",
-  "/information": "pages/information.html",
   "/make-website": "pages/make-website.html",
+  "/information": "pages/information.html",
+  "/make-application": "pages/make-application.html",
   "/404": "pages/404.html"
 }

@@ -63,25 +63,25 @@ export default function HomeFirst() {
       </div>
       <div className="relative -top-20 pt-5 pb-28 px-2 md:px-28 xl:px-64">
         <div className="flex flex-col justify-center items-center relative top-12">
-          <h1 className="text-3xl md:text-5xl text-center font-bold text-secondary">What Your Plans ?</h1>
-          <p className="text-secondary text-center text-lg px-5 md:px-0 md:text-3xl mt-3">Tell us what is your plan, your problems, and what’s on your mind.</p>
+          <h1 className="text-3xl md:text-5xl text-center font-bold text-secondary">What&#96;s your plan ?</h1>
+          <p className="text-secondary text-center text-lg px-5 md:px-0 md:text-3xl mt-3">Tell us about your plan, your mind and your problems. Then we&#96;ll handle all the details to fulfill your extraordinary plans.</p>
           <div className="w-full grid grid-cols-1 md:grid-cols-3 mt-5">
             <div className="flex flex-col justify-center items-center relative rounded-xl ur-plan">
               <div className="relative top-4">
-                <Image src={"/sec-21.png"} width={width < 768 ? 250 : 350} height={width < 768 ? 250 : 350} alt="We Listens" />
-                <span className="text-3xl left-0 right-0 text-center absolute bottom-0 md:bottom-12 text-black">We Listens</span>
+                <Image src={"/sec-21.png"} width={width < 768 ? 250 : 350} height={width < 768 ? 250 : 350} alt="We Listen" />
+                <span className="text-3xl left-0 right-0 text-center absolute bottom-6 md:bottom-12 text-black">We Listen</span>
               </div>
             </div>
             <div className="flex flex-col justify-center items-center relative rounded-xl ur-plan">
               <div className="relative top-4">
-                <Image src={"/sec-22.png"} width={width < 768 ? 250 : 350} height={width < 768 ? 250 : 350} alt="We Listens" />
-                <span className="text-3xl left-0 right-0 text-center absolute bottom-0 md:bottom-12 text-black">We Care</span>
+                <Image src={"/sec-22.png"} width={width < 768 ? 250 : 350} height={width < 768 ? 250 : 350} alt="We Care" />
+                <span className="text-3xl left-0 right-0 text-center absolute bottom-6 md:bottom-12 text-black">We Care</span>
               </div>
             </div>
             <div className="flex flex-col justify-center items-center relative rounded-xl ur-plan">
               <div className="relative top-4">
-                <Image src={"/sec-23.png"} width={width < 768 ? 250 : 350} height={width < 768 ? 250 : 350} alt="We Listens" />
-                <span className="text-3xl left-0 right-0 text-center absolute bottom-0 md:bottom-12 text-black">We Act</span>
+                <Image src={"/sec-23.png"} width={width < 768 ? 250 : 350} height={width < 768 ? 250 : 350} alt="We Act" />
+                <span className="text-3xl left-0 right-0 text-center absolute bottom-6 md:bottom-12 text-black">We Act</span>
               </div>
             </div>
           </div>

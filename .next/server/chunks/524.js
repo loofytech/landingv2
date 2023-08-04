@@ -21,7 +21,7 @@ var globals = __webpack_require__(6764);
 // EXTERNAL MODULE: external "react-redux"
 var external_react_redux_ = __webpack_require__(6022);
 // EXTERNAL MODULE: external "@reduxjs/toolkit"
-var toolkit_ = __webpack_require__(5184);
+var toolkit_ = __webpack_require__(7666);
 // EXTERNAL MODULE: ./store/reducers/homeReducer.ts
 var homeReducer = __webpack_require__(9912);
 ;// CONCATENATED MODULE: ./store/reducers/transitionReducer.ts
@@ -913,7 +913,7 @@ function useWindowSize() {
 /* harmony export */   cH: () => (/* binding */ setHeaderColor),
 /* harmony export */   on: () => (/* binding */ setSecond)
 /* harmony export */ });
-/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5184);
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7666);
 /* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__);
 
 const homeReducer = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)({

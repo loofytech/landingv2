@@ -795,6 +795,10 @@ function App({ Component, pageProps }) {
                         rel: "shortcut icon",
                         href: "favicon.ico",
                         type: "image/x-icon"
+                    }),
+                    /*#__PURE__*/ jsx_runtime.jsx("meta", {
+                        name: "google-site-verification",
+                        content: "xdzlUk8gY5v47STF8YEX48lxXd-bowOi7ww9buHMAaY"
                     })
                 ]
             }),

@@ -11,6 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <Head>
       <title>Loofytech</title>
       <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+      <meta name="google-site-verification" content="xdzlUk8gY5v47STF8YEX48lxXd-bowOi7ww9buHMAaY" />
     </Head>
     <Script strategy="lazyOnload" src="https://www.googletagmanager.com/gtag/js?id=G-0K0K6FHSZV" id="g-manager" />
     <Script strategy="lazyOnload" id="g-manager-datalayer">

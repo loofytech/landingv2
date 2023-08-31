@@ -99,6 +99,7 @@ export default function MakeApplication() {
     <NextSeo
       title={`Loofytech - Jasa Pembuatan Aplikasi Murah`}
       description={`Loofytech adalah jasa, dibangun oleh tenaga profesional dan berpengalaman dibidangnya, cukup dengan modal 500.000`}
+      canonical={`https://loofytech.com${router.asPath}`}
       openGraph={{
         title: "Loofytech - Jasa Pembuatan Aplikasi Murah",
         description: `Loofytech adalah jasa, dibangun oleh tenaga profesional dan berpengalaman dibidangnya, cukup dengan modal 500.000`,

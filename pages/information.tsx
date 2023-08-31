@@ -10,6 +10,7 @@ export default function Information() {
     <NextSeo
       title={`Loofytech - Informasi bagi hasil`}
       description={`Loofytech adalah jasa, dibangun oleh tenaga profesional dan berpengalaman dibidangnya, cukup dengan modal 500.000`}
+      canonical={`https://loofytech.com${router.asPath}`}
       openGraph={{
         title: "Loofytech - Informasi bagi hasil",
         description: `Loofytech adalah jasa, dibangun oleh tenaga profesional dan berpengalaman dibidangnya, cukup dengan modal 500.000`,
